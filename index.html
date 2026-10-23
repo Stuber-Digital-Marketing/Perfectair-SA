@@ -143,6 +143,10 @@
   .hero-air path:nth-child(2){animation-duration:30s;stroke:rgba(143,201,212,.22);}
   .hero-air path:nth-child(3){animation-duration:26s;animation-direction:reverse;stroke:rgba(255,255,255,.14);}
   .hero-air.paused path{animation-play-state:paused;}
+  .hero-air.m{display:none;}
+  .hero-air.m path{vector-effect:non-scaling-stroke;stroke-dasharray:5 11;stroke-width:1.2;}
+  .hero-air.m path:nth-child(even){animation-duration:30s;stroke:rgba(143,201,212,.22);}
+  .hero-air.m path:nth-child(3n){animation-direction:reverse;stroke:rgba(255,255,255,.14);}
   @keyframes flow{to{stroke-dashoffset:-400;}}
   .hero-inner{position:relative;max-width:var(--maxw);margin:0 auto;padding:92px 32px 72px;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;}
   .hero h1{font-size:46px;line-height:1.1;margin-bottom:22px;color:#fff;}
@@ -334,6 +338,8 @@
     nav.links a{padding:13px 0;border-bottom:1px solid var(--line);font-size:15px;}
     .burger{display:flex;}
     .nav-cta{display:none;}
+    .hero-air.d{display:none;}
+    .hero-air.m{display:block;}
     .hero-inner{grid-template-columns:1fr;padding:64px 24px 52px;gap:40px;}
     .hero h1{font-size:36px;}
     .hero-stats .wrap{grid-template-columns:repeat(2,1fr);}
@@ -424,10 +430,20 @@
 <!-- ======= Hero (fond bleu foncé) ======= -->
 <section class="hero" style="padding:0;">
   <div class="hero-photo"></div>
-  <svg class="hero-air" viewBox="0 0 1200 600" preserveAspectRatio="none" aria-hidden="true">
+  <svg class="hero-air d" viewBox="0 0 1200 600" preserveAspectRatio="none" aria-hidden="true">
     <path d="M-50 120 C 250 40, 450 220, 700 130 S 1100 60, 1300 160"/>
     <path d="M-50 300 C 200 380, 520 200, 760 310 S 1080 420, 1300 300"/>
     <path d="M-50 480 C 280 420, 480 560, 780 470 S 1120 400, 1300 500"/>
+  </svg>
+  <svg class="hero-air m" viewBox="0 0 400 1000" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M-20 60 C 90 20, 170 100, 250 60 S 370 20, 430 70"/>
+    <path d="M-20 185 C 90 225, 170 145, 250 185 S 370 225, 430 175"/>
+    <path d="M-20 310 C 90 270, 170 350, 250 310 S 370 270, 430 320"/>
+    <path d="M-20 435 C 90 475, 170 395, 250 435 S 370 475, 430 425"/>
+    <path d="M-20 560 C 90 520, 170 600, 250 560 S 370 520, 430 570"/>
+    <path d="M-20 685 C 90 725, 170 645, 250 685 S 370 725, 430 675"/>
+    <path d="M-20 810 C 90 770, 170 850, 250 810 S 370 770, 430 820"/>
+    <path d="M-20 935 C 90 975, 170 895, 250 935 S 370 975, 430 925"/>
   </svg>
   <div class="hero-inner">
     <div class="reveal">
@@ -777,9 +793,9 @@
   });
 
   /* Met l'animation des lignes d'air en pause quand le haut de page n'est plus visible */
-  var air=document.querySelector('.hero-air');
-  if(air && 'IntersectionObserver' in window){
-    new IntersectionObserver(function(en){ air.classList.toggle('paused',!en[0].isIntersecting); }).observe(document.querySelector('.hero'));
+  var airs=document.querySelectorAll('.hero-air');
+  if(airs.length && 'IntersectionObserver' in window){
+    new IntersectionObserver(function(en){ airs.forEach(function(a){ a.classList.toggle('paused',!en[0].isIntersecting); }); }).observe(document.querySelector('.hero'));
   }
 
   /* Apparition au défilement */
