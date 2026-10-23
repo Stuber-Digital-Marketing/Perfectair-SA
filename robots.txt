@@ -1,0 +1,7 @@
+# Perfectair SA — robots.txt
+# Tous les robots (moteurs de recherche classiques et robots de recherche IA
+# comme OAI-SearchBot, Claude-SearchBot, PerplexityBot) sont autorisés.
+User-agent: *
+Allow: /
+
+Sitemap: https://www.perfectair.ch/sitemap.xml
