@@ -348,7 +348,6 @@
   .foot-credit{margin-top:22px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);text-align:center;font-size:13px;}
 
   /* Barre d'appel mobile + étiquette maquette */
-  .callbar{display:none;}
   .maquette-tag{position:fixed;right:16px;bottom:16px;z-index:110;background:rgba(6,26,33,.74);color:#fff;font-size:12px;letter-spacing:.02em;padding:9px 15px;border-radius:30px;border:1px solid rgba(255,255,255,.18);pointer-events:none;}
 
   /* ---------- Tablette / petits ordinateurs ---------- */
@@ -411,7 +410,16 @@
     .step h4{font-size:22px;}
     .urgence{padding:64px 0;}
     .tel-big{width:100%;justify-content:center;padding:16px 20px;}
-    .pillars,.ref-grid,.team-grid{grid-template-columns:1fr;}
+    .pillars{grid-template-columns:1fr;}
+    .ref-grid{grid-template-columns:1fr 1fr;gap:10px;margin-bottom:22px;}
+    .ref-card{padding:16px 15px;font-size:12.5px;line-height:1.45;border-radius:16px;}
+    .ref-card b{font-size:16px;margin-bottom:3px;}
+    .ref-tag{margin-top:10px;font-size:9.5px;padding:3px 9px;letter-spacing:.07em;}
+    .sectors{gap:6px;}
+    .sector-chip{padding:6px 12px;font-size:12px;}
+    .team-grid{gap:12px;}
+    .member b{font-size:16px;}
+    .member span{font-size:12.5px;}
     .pillar .num{font-size:52px;margin-bottom:14px;}
     .contact-info,.contact-form{padding:32px 22px;}
     .contact-form input,.contact-form select,.contact-form textarea{font-size:16px;}
@@ -419,12 +427,7 @@
     .review-card p{font-size:19px;}
     .score{width:100%;justify-content:center;}
     .foot-row{flex-direction:column;}
-    body{padding-bottom:74px;}
-    .callbar{display:flex;position:fixed;left:10px;right:10px;bottom:10px;z-index:105;gap:8px;padding:8px;background:rgba(6,26,33,.96);border-radius:18px;box-shadow:0 16px 34px -10px rgba(0,0,0,.6);}
-    .callbar a{flex:1;display:flex;align-items:center;justify-content:center;padding:13px;border-radius:12px;font-weight:600;font-size:14.5px;}
-    .callbar .call{background:#fff;color:var(--deep);}
-    .callbar .quote{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2);}
-    .maquette-tag{right:10px;bottom:86px;font-size:11px;padding:7px 12px;}
+    .maquette-tag{right:10px;bottom:10px;font-size:11px;padding:7px 12px;}
   }
 
   @media(prefers-reduced-motion:reduce){
@@ -538,7 +541,7 @@
     <span>Université de Neuchâtel</span>
     <span>Universo SA</span>
     <span>Parking Place Pury SA</span>
-    <span>Homes pour personnes âgées</span>
+    <span>Homes</span>
   </div>
 </div>
 
@@ -753,7 +756,7 @@
       <div class="ref-card reveal"><b>Banque cantonale neuchâteloise</b>Neuchâtel<br><span class="ref-tag">Tertiaire</span></div>
       <div class="ref-card reveal"><b>Université de Neuchâtel</b>Faculté des sciences<br><span class="ref-tag">Institution</span></div>
       <div class="ref-card reveal"><b>Parking Place Pury SA</b>Neuchâtel<br><span class="ref-tag">Infrastructure</span></div>
-      <div class="ref-card reveal"><b>Homes pour personnes âgées</b>Düdingen, Flamatt, Le Locle, La Chaux-de-Fonds<br><span class="ref-tag">Santé</span></div>
+      <div class="ref-card reveal"><b>Homes</b>Le Locle, La Chaux-de-Fonds, Düdingen, Flamatt<br><span class="ref-tag">Santé</span></div>
     </div>
     <div class="sectors reveal">
       <span class="sector-chip">Industrie horlogère</span>
@@ -853,12 +856,6 @@
     </div>
   </div>
 </footer>
-
-<!-- Barre d'appel (mobile) -->
-<div class="callbar">
-  <a class="call" href="tel:+41327242277">Appeler</a>
-  <a class="quote" href="#contact">Devis</a>
-</div>
 
 <!-- Étiquette maquette : supprimer cette ligne à la mise en ligne finale -->
 <div class="maquette-tag">Version provisoire — en cours de réalisation</div>
