@@ -3,15 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#061a21">
 <title>Perfectair SA — Ventilation, climatisation et dépannage | Bevaix, Neuchâtel</title>
-<meta name="description" content="Perfectair SA, bureau d'étude et installateur de ventilation et climatisation à Bevaix (NE) depuis 1944. Entretien, dépannage 24h/24, climatisation.">
+<meta name="description" content="Perfectair SA, bureau d'étude et installateur de ventilation et climatisation à Bevaix (NE) depuis 1944. Ventilation, entretien et dépannage 24h/24.">
 <link rel="canonical" href="https://www.perfectair.ch/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_CH">
 <meta property="og:site_name" content="Perfectair SA">
 <meta property="og:title" content="Perfectair SA — Ventilation, climatisation et dépannage | Bevaix, Neuchâtel">
-<meta property="og:description" content="Bureau d'étude et installateur de ventilation et climatisation depuis 1944. Entretien, dépannage 7j/7 24h/24.">
+<meta property="og:description" content="Bureau d'étude et installateur de ventilation et climatisation depuis 1944. Ventilation, entretien, dépannage 7j/7 24h/24.">
 <meta property="og:url" content="https://www.perfectair.ch/">
 <!-- À AMÉLIORER : remplacer par une image 1200x630 px (photo + logo) pour un bel aperçu sur WhatsApp / LinkedIn -->
 <meta property="og:image" content="https://www.perfectair.ch/perfect-air.png">
@@ -24,7 +25,7 @@
   "url": "https://www.perfectair.ch/",
   "logo": "https://www.perfectair.ch/perfect-air.png",
   "image": "https://www.perfectair.ch/perfect-air.png",
-  "description": "Bureau d'étude et installateur de ventilation et de climatisation à Bevaix (Neuchâtel) depuis 1944. Entretien, dépannage 7j/7 24h/24, climatisation.",
+  "description": "Bureau d'étude et installateur de ventilation et de climatisation à Bevaix (Neuchâtel) depuis 1944. Ventilation, entretien, dépannage 7j/7 24h/24.",
   "telephone": "+41 32 724 22 77",
   "email": "info@perfectair.ch",
   "foundingDate": "1944",
@@ -45,446 +46,513 @@
   ]
 }
 </script>
+<script>document.documentElement.className+=' js';</script>
 <!--
 ==========================================================================
- PERFECTAIR SA — VERSION 2 (squelette prêt à recevoir les contenus)
+ PERFECTAIR SA — VERSION 4 TEST ("wow")
  Réalisé par Stuber Digital Marketing
 
- COMMENT AJOUTER LES IMAGES
- Créer un dossier "images" à côté de ce fichier, puis y déposer les photos
- avec EXACTEMENT ces noms. Elles apparaissent automatiquement, sans toucher
- au code. Tant qu'une photo manque, un cadre "Photo à venir" s'affiche.
-
-   perfect-air.png ......... logo Perfectair (déjà en place, à côté de ce fichier)
-   hero.jpg ................ grande photo d'ambiance en haut de page
-   service-depannage.jpg ... photo du service entretien / dépannage
-   service-clim.jpg ........ photo du service climatisation
-   projet1-avant.jpg / projet1-apres.jpg .. réalisation 1 (avant / après)
-   projet2-etape1.jpg / projet2-etape2.jpg / projet2-etape3.jpg .. réalisation 2 (étapes)
-   projet3-1.jpg / projet3-2.jpg / projet3-3.jpg .. réalisation 3 (galerie)
-   equipe1.jpg ... equipe4.jpg  (uniquement si la section Équipe est activée)
-
- Les repères "À MODIFIER" dans ce fichier indiquent les textes à valider.
- Section Équipe : masquée par défaut. Pour l'afficher, supprimer le mot
- "hidden" sur la ligne <section id="equipe" ...> et décommenter son lien de menu.
+ IMAGES : déposer les photos à côté de ce fichier (même dossier) ou dans un
+ dossier "images" avec ces noms exacts, elles apparaissent automatiquement :
+   perfect-air.png ......... logo (déjà en place)
+   hero.jpg ................ photo d'ambiance de l'accueil (fond, très discrète)
+   service-depannage.jpg / service-ventilation.jpg ... photos des deux services prioritaires
+   projet1-avant.jpg / projet1-apres.jpg ........ réalisation 1 (avant / après)
+   projet2-etape1.jpg / etape2 / etape3 ......... réalisation 2 (étapes)
+   projet3-1.jpg / projet3-2.jpg / projet3-3.jpg . réalisation 3 (galerie)
+   equipe1.jpg ... equipe4.jpg ................. section Équipe
+ Les chemins ci-dessous sont "images/xxx.jpg" : créer un dossier images.
 ==========================================================================
 -->
 <style>
   :root{
-    --ink:#12181c;
-    --ink-soft:#3c474d;
-    --muted:#6b767c;
-    --line:#e1e5e7;
-    --bg:#fbfbfa;
-    --surface:#ffffff;
-    --accent:#0e4d5c;
-    --accent-light:#e8f1f2;
-    --accent-line:#c3d8db;
-    --steel:#2f4550;
-    --deep:#0a2b35;
-    --deep-2:#0e4d5c;
-    --gold:#a9762f;
-    --gold-soft:#d9a85f;
-    --ice:#8fc9d4;
-    --radius:6px;
-    --maxw:1120px;
+    --ink:#0d1a1f; --ink-soft:#3c474d; --muted:#66767c; --line:#e1e6e8;
+    --bg:#f5f8f8; --surface:#ffffff;
+    --teal:#0e4d5c; --teal-l:#e8f1f2; --steel:#2f4550;
+    --deep:#061a21; --deep2:#0a2b35;
+    --ice:#8fc9d4; --ice2:#c9e8ee; --gold:#d9a85f;
+    --maxw:1180px; --r:20px;
     font-size:16px;
   }
   *{box-sizing:border-box;}
   [hidden]{display:none !important;}
-  html{scroll-behavior:smooth;scroll-padding-top:84px;}
-  body{margin:0;font-family:'Inter','Helvetica Neue',Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
-  h1,h2,h3,h4{font-family:Georgia,'Times New Roman',serif;font-weight:400;color:var(--ink);margin:0;letter-spacing:-0.01em;}
+  html{scroll-behavior:smooth;scroll-padding-top:96px;}
+  body{margin:0;font-family:'Inter','Helvetica Neue',Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  h1,h2,h3,h4{font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing:-0.015em;margin:0;color:var(--ink);}
   a{color:inherit;text-decoration:none;}
   img{max-width:100%;display:block;}
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
-  .eyebrow{text-transform:uppercase;letter-spacing:0.14em;font-size:12px;color:var(--accent);font-weight:600;}
-  .on-dark .eyebrow,.dark .eyebrow,.hero .eyebrow{color:var(--ice);}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:600;color:var(--teal);}
+  .eyebrow::before{content:'';width:26px;height:1px;background:currentColor;}
+  .dark .eyebrow,.hero .eyebrow{color:var(--ice);}
+  .hero-eyebrow{display:flex;margin-bottom:18px;}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 28px;border-radius:14px;font-size:15px;font-weight:600;border:1px solid transparent;cursor:pointer;font-family:inherit;transition:transform .2s,background .2s,color .2s,border-color .2s,box-shadow .2s;}
+  .btn:active{transform:scale(.97);}
+  .btn-light{background:#fff;color:var(--deep);box-shadow:0 10px 30px -10px rgba(143,201,212,.6);}
+  .btn-light:hover{background:var(--ice2);transform:translateY(-2px);}
+  .btn-ghost{border-color:rgba(255,255,255,.35);color:#fff;}
+  .btn-ghost:hover{background:rgba(255,255,255,.12);border-color:#fff;}
+  .btn-dark{background:var(--steel);color:#fff;}
+  .btn-dark:hover{background:var(--teal);transform:translateY(-2px);}
+  .arrow{display:inline-block;transition:transform .2s;}
+  .btn:hover .arrow{transform:translateX(4px);}
 
-  /* ---------- Bandeau urgence (haut) ---------- */
-  .topbar{background:var(--deep);color:#d6e4e7;font-size:13px;}
-  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:9px;padding-bottom:9px;}
-  .topbar b{color:#fff;font-weight:600;}
-  .topbar a{color:#fff;font-weight:600;border-bottom:1px solid rgba(255,255,255,.35);}
-  .pulse{display:inline-block;position:relative;width:8px;height:8px;border-radius:50%;background:#4ade80;margin-right:8px;}
-  .pulse::after{content:'';position:absolute;inset:0;border-radius:50%;background:#4ade80;animation:ping 2s ease-out infinite;}
-  @keyframes ping{0%{transform:scale(1);opacity:.6;}70%,100%{transform:scale(2.8);opacity:0;}}
+  /* Barre de progression */
+  .progress{position:fixed;top:0;left:0;right:0;height:3px;z-index:120;pointer-events:none;}
+  .progress i{display:block;height:100%;background:linear-gradient(90deg,var(--ice),var(--gold));transform-origin:0 50%;transform:scaleX(0);}
 
-  /* ---------- Header ---------- */
-  header{position:sticky;top:0;z-index:50;background:rgba(251,251,250,.97);border-bottom:1px solid var(--line);}
-  .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 32px;max-width:var(--maxw);margin:0 auto;gap:20px;}
-  .logo{display:flex;align-items:center;gap:10px;}
-  .logo-img{height:50px;width:auto;}
-  .logo-mark{width:36px;height:36px;border-radius:50%;background:var(--steel);display:flex;align-items:center;justify-content:center;color:#fff;font-family:Georgia,serif;font-size:17px;flex-shrink:0;}
-  .logo-text{font-family:Georgia,serif;font-size:19px;line-height:1.15;}
-  .logo-text small{display:block;font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;margin-top:2px;}
-  nav.links{display:flex;gap:26px;font-size:14px;color:var(--ink-soft);}
-  nav.links a{padding:4px 0;border-bottom:1px solid transparent;transition:border-color .15s,color .15s;}
-  nav.links a:hover{border-color:var(--accent);color:var(--accent);}
-  .nav-cta{background:var(--steel);color:#fff;padding:10px 18px;border-radius:var(--radius);font-size:13.5px;font-weight:600;white-space:nowrap;transition:background .15s;}
-  .nav-cta:hover{background:var(--accent);}
-  .burger{display:none;background:none;border:1px solid var(--line);border-radius:var(--radius);width:42px;height:42px;cursor:pointer;padding:0;align-items:center;justify-content:center;flex-direction:column;gap:5px;}
+  /* ---------- Navigation flottante ---------- */
+  .nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);width:min(var(--maxw),calc(100% - 24px));z-index:100;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 10px 8px 18px;background:rgba(255,255,255,.97);border-radius:18px;box-shadow:0 12px 34px -14px rgba(3,20,26,.55);transition:box-shadow .3s;}
+  .logo-img{height:46px;width:auto;}
+  nav.links{display:flex;gap:22px;font-size:14px;color:var(--ink-soft);}
+  nav.links a{position:relative;padding:6px 0;transition:color .2s;}
+  nav.links a::after{content:'';position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--teal);transform:scaleX(0);transform-origin:0 50%;transition:transform .25s;}
+  nav.links a:hover{color:var(--teal);}
+  nav.links a:hover::after{transform:scaleX(1);}
+  .nav-cta{background:var(--steel);color:#fff;padding:12px 20px;border-radius:12px;font-size:14px;font-weight:600;white-space:nowrap;transition:background .2s;}
+  .nav-cta:hover{background:var(--teal);}
+  .burger{display:none;width:44px;height:44px;border:1px solid var(--line);background:#fff;border-radius:12px;cursor:pointer;padding:0;flex-direction:column;align-items:center;justify-content:center;gap:5px;}
   .burger span{display:block;width:18px;height:2px;background:var(--ink);transition:transform .2s,opacity .2s;}
   .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg);}
   .burger[aria-expanded="true"] span:nth-child(2){opacity:0;}
   .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
 
-  /* ---------- Placeholders photo (réutilisables) ---------- */
-  .photo{position:relative;overflow:hidden;background:repeating-linear-gradient(135deg,#dde6e8 0 12px,#e8eff0 12px 24px);display:flex;align-items:center;justify-content:center;color:#6f8a91;border-radius:8px;}
-  .photo::after{content:attr(data-label);position:absolute;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;text-align:center;padding:0 12px;}
-  .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;}
-  .dark .photo{background:repeating-linear-gradient(135deg,rgba(255,255,255,.06) 0 12px,rgba(255,255,255,.1) 12px 24px);color:#9fc3cb;}
+  /* ---------- Hero ---------- */
+  .hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;color:#fff;overflow:hidden;
+    background:
+      radial-gradient(60% 55% at 82% 38%,rgba(14,77,92,.95) 0%,rgba(14,77,92,0) 70%),
+      radial-gradient(45% 45% at 8% 100%,rgba(143,201,212,.13) 0%,rgba(143,201,212,0) 70%),
+      linear-gradient(180deg,#05171d 0%,#0a2b35 100%);}
+  .hero-photo{position:absolute;inset:0;background:url('images/hero.jpg') center/cover no-repeat;opacity:.22;}
+  #flow{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;}
+  .hero-main{position:relative;flex:1;width:100%;max-width:var(--maxw);margin:0 auto;padding:128px 28px 40px;display:grid;grid-template-columns:1.12fr .88fr;gap:30px;align-items:center;}
+  .live{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;color:#dff3f6;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);padding:8px 16px 8px 14px;border-radius:40px;margin-bottom:26px;}
+  .dot{position:relative;width:8px;height:8px;border-radius:50%;background:#4ade80;flex-shrink:0;}
+  .dot::after{content:'';position:absolute;inset:0;border-radius:50%;background:#4ade80;animation:ping 2s ease-out infinite;}
+  @keyframes ping{0%{transform:scale(1);opacity:.6;}70%,100%{transform:scale(3);opacity:0;}}
+  .hero h1{font-size:clamp(38px,5.7vw,78px);line-height:1.04;color:#fff;margin-bottom:26px;text-wrap:balance;}
+  .w{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .02em .14em;margin-bottom:-.14em;}
+  .w>span{display:inline-block;transform:translateY(108%);animation:up .95s cubic-bezier(.2,.75,.2,1) forwards;animation-delay:calc(var(--i)*75ms + 200ms);}
+  @keyframes up{to{transform:none;}}
+  .hero h1 em{font-style:italic;color:var(--ice);}
+  .hero h1 em .w>span{padding-bottom:.14em;margin-bottom:-.14em;background:linear-gradient(95deg,#8fc9d4 0%,#e6f7fa 50%,#8fc9d4 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+  .hero .lead{font-size:clamp(15.5px,1.5vw,18px);color:#c3dce1;max-width:540px;margin:0 0 34px;opacity:0;animation:fade .9s .9s forwards;}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;opacity:0;animation:fade .9s 1.1s forwards;}
+  .hero .live{opacity:0;animation:fade .8s .1s forwards;}
+  @keyframes fade{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:none;}}
 
-  /* ---------- Hero (fond sombre) ---------- */
-  .hero{position:relative;overflow:hidden;contain:paint;color:#fff;background:linear-gradient(135deg,var(--deep) 0%,#0b3a47 55%,var(--deep-2) 100%);}
-  .hero-photo{position:absolute;inset:0;background:url('images/hero.jpg') center/cover no-repeat;opacity:.28;}
-  .hero-air{position:absolute;inset:0;width:100%;height:100%;opacity:.55;pointer-events:none;}
-  .hero-air path{fill:none;stroke:rgba(143,201,212,.35);stroke-width:1.4;stroke-dasharray:6 14;animation:flow 22s linear infinite;}
-  .hero-air path:nth-child(2){animation-duration:30s;stroke:rgba(143,201,212,.22);}
-  .hero-air path:nth-child(3){animation-duration:26s;animation-direction:reverse;stroke:rgba(255,255,255,.14);}
-  .hero-air.paused path{animation-play-state:paused;}
-  .hero-air.m{display:none;}
-  .hero-air.m path{vector-effect:non-scaling-stroke;stroke-dasharray:5 11;stroke-width:1.2;}
-  .hero-air.m path:nth-child(even){animation-duration:30s;stroke:rgba(143,201,212,.22);}
-  .hero-air.m path:nth-child(3n){animation-direction:reverse;stroke:rgba(255,255,255,.14);}
-  @keyframes flow{to{stroke-dashoffset:-400;}}
-  .hero-inner{position:relative;max-width:var(--maxw);margin:0 auto;padding:92px 32px 72px;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;}
-  .hero h1{font-size:46px;line-height:1.1;margin-bottom:22px;color:#fff;}
-  .hero h1 em{font-style:normal;color:var(--ice);}
-  .hero p.lead{font-size:17px;color:#cfe0e4;max-width:540px;margin:0 0 32px;}
-  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;}
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 26px;border-radius:var(--radius);font-size:14.5px;font-weight:600;transition:background .15s,color .15s,border-color .15s,transform .15s;cursor:pointer;border:1px solid transparent;font-family:inherit;}
-  .btn:active{transform:scale(.98);}
-  .btn-light{background:#fff;color:var(--deep);}
-  .btn-light:hover{background:var(--ice);}
-  .btn-ghost{border-color:rgba(255,255,255,.5);color:#fff;}
-  .btn-ghost:hover{background:#fff;color:var(--deep);}
-  .btn-dark{background:var(--steel);color:#fff;}
-  .btn-dark:hover{background:var(--accent);}
-  .glass{background:rgba(12,52,64,.72);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:32px;}
-  .glass h3{color:#fff;font-size:18px;margin-bottom:14px;}
-  .schema-row{display:flex;align-items:flex-start;gap:14px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.14);font-size:13.5px;color:#d6e4e7;}
-  .schema-row:last-child{border-bottom:none;padding-bottom:0;}
-  .schema-num{width:26px;height:26px;border-radius:50%;border:1px solid rgba(255,255,255,.45);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;margin-top:1px;}
-  .schema-row b{color:#fff;font-weight:600;}
-  .hero-stats{position:relative;border-top:1px solid rgba(255,255,255,.14);background:rgba(4,22,28,.35);}
+  /* Ventilateur */
+  .fan{position:relative;width:min(100%,470px);aspect-ratio:1;justify-self:center;opacity:0;animation:fade 1.2s .5s forwards;}
+  .fan::before{content:'';position:absolute;inset:-12%;background:radial-gradient(circle,rgba(143,201,212,.28) 0%,rgba(143,201,212,0) 62%);}
+  .fan svg{position:absolute;inset:0;width:100%;height:100%;}
+  .fan-rings{animation:spin 90s linear infinite reverse;}
+  .fan-blades{animation:spin 16s linear infinite;will-change:transform;}
+  @keyframes spin{to{transform:rotate(360deg);}}
+  .chip{position:absolute;display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;color:#e6f6f9;background:rgba(8,38,48,.82);border:1px solid rgba(143,201,212,.35);padding:8px 14px;border-radius:30px;animation:float 6s ease-in-out infinite;white-space:nowrap;}
+  .chip::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--ice);}
+  .c1{top:8%;left:-2%;} .c2{top:24%;right:-6%;animation-delay:-1.5s;} .c3{bottom:20%;left:-8%;animation-delay:-3s;} .c4{bottom:5%;right:4%;animation-delay:-4.5s;}
+  @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+
+  .hero-stats{position:relative;border-top:1px solid rgba(255,255,255,.13);background:rgba(3,16,21,.45);}
   .hero-stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-top:26px;padding-bottom:26px;}
-  .stat b{display:block;font-family:Georgia,serif;font-size:30px;color:#fff;line-height:1.1;}
-  .stat span{font-size:12px;color:#9fc3cb;text-transform:uppercase;letter-spacing:.07em;}
+  .stat b{display:block;font-family:Georgia,serif;font-weight:400;font-size:clamp(30px,3.6vw,46px);line-height:1.05;color:#fff;font-variant-numeric:tabular-nums;}
+  .stat span{font-size:12px;color:#8db4bc;text-transform:uppercase;letter-spacing:.09em;}
+  .scroll-hint{position:absolute;left:50%;bottom:112px;transform:translateX(-50%);width:22px;height:36px;border:1.5px solid rgba(255,255,255,.4);border-radius:14px;opacity:.7;}
+  .scroll-hint::after{content:'';position:absolute;left:50%;top:7px;width:3px;height:7px;margin-left:-1.5px;border-radius:2px;background:#fff;animation:wheel 1.8s infinite;}
+  @keyframes wheel{0%{opacity:0;transform:translateY(0);}30%{opacity:1;}100%{opacity:0;transform:translateY(12px);}}
+
+  /* ---------- Bandeau références défilant ---------- */
+  .marquee{background:var(--surface);border-bottom:1px solid var(--line);overflow:hidden;padding:20px 0;}
+  .track{display:flex;gap:46px;width:max-content;animation:marquee 46s linear infinite;font-family:Georgia,serif;font-size:19px;color:var(--steel);white-space:nowrap;}
+  .track span{display:inline-flex;align-items:center;gap:46px;}
+  .track span::after{content:'';width:6px;height:6px;border-radius:50%;background:var(--ice);}
+  .marquee:hover .track{animation-play-state:paused;}
+  @keyframes marquee{to{transform:translateX(-50%);}}
 
   /* ---------- Sections ---------- */
-  section{padding:92px 0;}
-  .section-head{max-width:660px;margin-bottom:50px;}
-  .section-head h2{font-size:33px;margin-top:10px;}
-  .section-head p{color:var(--ink-soft);font-size:15.5px;margin:14px 0 0;}
-  .alt{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
-  .dark{background:linear-gradient(160deg,var(--deep) 0%,#0c3a47 100%);color:#d6e4e7;}
+  section{padding:110px 0;position:relative;}
+  .head{max-width:700px;margin-bottom:56px;}
+  .head h2{font-size:clamp(30px,4vw,50px);line-height:1.08;margin-top:16px;text-wrap:balance;}
+  .head p{color:var(--ink-soft);font-size:16.5px;margin:18px 0 0;max-width:580px;}
+  .dark{background:linear-gradient(170deg,var(--deep) 0%,var(--deep2) 100%);color:#c3dce1;}
   .dark h2,.dark h3,.dark h4{color:#fff;}
-  .dark .section-head p{color:#b9cfd4;}
+  .dark .head p{color:#a9c6cc;}
+  .alt{background:var(--surface);}
+  .js .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);}
+  .js .reveal.in{opacity:1;transform:none;}
 
-  /* ---------- Services ---------- */
-  .svc-main{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px;}
-  .svc-big{background:linear-gradient(160deg,var(--deep) 0%,var(--deep-2) 100%);border-radius:12px;overflow:hidden;color:#d6e4e7;display:flex;flex-direction:column;transition:transform .25s;}
-  .svc-big:hover{transform:translateY(-4px);}
-  .svc-big .photo{height:210px;border-radius:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.06) 0 12px,rgba(255,255,255,.1) 12px 24px);color:#9fc3cb;}
-  .svc-body{padding:30px 30px 32px;display:flex;flex-direction:column;gap:12px;flex:1;}
-  .badge{align-self:flex-start;font-size:11px;text-transform:uppercase;letter-spacing:.09em;font-weight:600;background:rgba(143,201,212,.16);color:var(--ice);padding:4px 11px;border-radius:20px;}
-  .svc-big h3{font-size:24px;color:#fff;}
-  .svc-big p{margin:0;font-size:14.5px;}
-  .ticks{list-style:none;padding:0;margin:4px 0 0;display:grid;gap:7px;font-size:14px;}
-  .ticks li{padding-left:24px;position:relative;}
-  .ticks li::before{content:'';position:absolute;left:0;top:7px;width:11px;height:6px;border-left:2px solid var(--ice);border-bottom:2px solid var(--ice);transform:rotate(-45deg);}
-  .svc-link{margin-top:auto;padding-top:10px;font-weight:600;color:#fff;font-size:14px;}
+  /* Spot lumineux au survol */
+  .spot{position:relative;--mx:50%;--my:50%;}
+  .spot::before{content:'';position:absolute;inset:0;border-radius:inherit;background:radial-gradient(420px circle at var(--mx) var(--my),rgba(143,201,212,.2),transparent 45%);opacity:0;transition:opacity .35s;pointer-events:none;z-index:1;}
+  .spot:hover::before{opacity:1;}
+
+  /* Placeholders photo */
+  .photo{position:relative;overflow:hidden;background:repeating-linear-gradient(135deg,#dde6e8 0 12px,#e8eff0 12px 24px);display:flex;align-items:center;justify-content:center;color:#6f8a91;border-radius:12px;}
+  .photo::after{content:attr(data-label);position:absolute;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;text-align:center;padding:0 12px;}
+  .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;}
+
+  /* ---------- Services (bento) ---------- */
+  .bento{display:grid;grid-template-columns:repeat(6,1fr);gap:20px;}
+  .svc-big{grid-column:span 3;border-radius:var(--r);overflow:hidden;background:linear-gradient(165deg,var(--deep) 0%,#0c4150 100%);color:#c3dce1;display:flex;flex-direction:column;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s;box-shadow:0 24px 50px -28px rgba(6,26,33,.8);}
+  .svc-big:hover{transform:translateY(-6px);box-shadow:0 34px 60px -28px rgba(6,26,33,.9);}
+  .svc-big .photo{height:230px;border-radius:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 12px,rgba(255,255,255,.09) 12px 24px);color:#8db4bc;}
+  .svc-body{position:relative;z-index:2;padding:32px 34px 36px;display:flex;flex-direction:column;gap:14px;flex:1;}
+  .badge{align-self:flex-start;font-size:11px;text-transform:uppercase;letter-spacing:.1em;font-weight:600;background:rgba(143,201,212,.15);color:var(--ice);padding:5px 12px;border-radius:30px;}
+  .svc-big h3{font-size:30px;color:#fff;}
+  .svc-big p{margin:0;font-size:15px;}
+  .ticks{list-style:none;padding:0;margin:4px 0 0;display:grid;gap:9px;font-size:14.5px;}
+  .ticks li{padding-left:28px;position:relative;}
+  .ticks li::before{content:'';position:absolute;left:2px;top:7px;width:12px;height:6px;border-left:2px solid var(--ice);border-bottom:2px solid var(--ice);transform:rotate(-45deg);}
+  .svc-link{margin-top:auto;padding-top:12px;font-weight:600;color:#fff;font-size:14.5px;}
   .svc-link:hover{color:var(--ice);}
-  .svc-sec{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-  .svc-card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:28px;transition:border-color .2s,transform .2s;}
-  .svc-card:hover{border-color:var(--accent);transform:translateY(-3px);}
-  .svc-ico{width:46px;height:46px;border-radius:50%;background:var(--accent-light);color:var(--accent);display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
-  .svc-ico svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;}
-  .svc-card h4{font-size:18px;margin-bottom:8px;}
-  .svc-card p{margin:0;font-size:14px;color:var(--muted);}
+  .svc-small{grid-column:span 2;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:30px;transition:transform .3s,border-color .3s,box-shadow .3s;}
+  .svc-small:hover{transform:translateY(-5px);border-color:var(--ice);box-shadow:0 26px 40px -30px rgba(14,77,92,.55);}
+  .svc-ico{width:52px;height:52px;border-radius:16px;background:var(--teal-l);color:var(--teal);display:flex;align-items:center;justify-content:center;margin-bottom:20px;}
+  .svc-ico svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;}
+  .svc-small h4{font-size:20px;margin-bottom:8px;}
+  .svc-small p{margin:0;font-size:14.5px;color:var(--muted);}
 
-  /* ---------- Bandeau urgence ---------- */
-  .urgence{background:var(--accent);color:#fff;padding:54px 0;position:relative;overflow:hidden;}
-  .urgence::before{content:'';position:absolute;right:-80px;top:-80px;width:340px;height:340px;border-radius:50%;border:60px solid rgba(255,255,255,.06);}
-  .urgence .wrap{position:relative;display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;}
-  .urgence h2{color:#fff;font-size:28px;margin-bottom:6px;}
-  .urgence p{margin:0;color:#d6e8eb;font-size:15px;}
-  .urgence .tel{font-family:Georgia,serif;font-size:34px;color:#fff;white-space:nowrap;}
+  /* ---------- Méthode (chronologie animée) ---------- */
+  .method{overflow:hidden;}
+  .method::before{content:'';position:absolute;right:-18%;top:6%;width:760px;height:760px;border-radius:50%;background:radial-gradient(circle,rgba(14,77,92,.55) 0%,rgba(14,77,92,0) 65%);pointer-events:none;}
+  .method-grid{position:relative;display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:start;}
+  .method .head{position:sticky;top:120px;margin-bottom:0;}
+  .steps{position:relative;padding-left:70px;display:flex;flex-direction:column;gap:46px;--p:0;}
+  .steps::before,.steps::after{content:'';position:absolute;left:23px;top:8px;width:2px;border-radius:2px;}
+  .steps::before{bottom:8px;background:rgba(255,255,255,.12);}
+  .steps::after{height:calc((100% - 16px)*var(--p));background:linear-gradient(180deg,var(--ice),var(--gold));box-shadow:0 0 14px rgba(143,201,212,.7);}
+  .step{position:relative;opacity:.45;transition:opacity .5s;}
+  .step.on{opacity:1;}
+  .step .n{position:absolute;left:-70px;top:0;width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(255,255,255,.25);background:var(--deep2);display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-size:18px;color:#fff;transition:background .4s,border-color .4s,color .4s,box-shadow .4s;z-index:2;}
+  .step.on .n{background:var(--ice);border-color:var(--ice);color:var(--deep);box-shadow:0 0 0 7px rgba(143,201,212,.16);}
+  .step h4{font-size:25px;margin-bottom:8px;}
+  .step p{margin:0;font-size:15.5px;color:#a9c6cc;max-width:460px;}
+
+  /* ---------- Urgence ---------- */
+  .urgence{padding:84px 0;background:linear-gradient(120deg,var(--teal) 0%,#0b6173 55%,#13778b 100%);color:#fff;overflow:hidden;}
+  .urgence::before{content:'24/7';position:absolute;right:-1%;top:50%;transform:translateY(-52%);font-family:Georgia,serif;font-size:clamp(140px,26vw,360px);line-height:1;color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.2);pointer-events:none;white-space:nowrap;}
+  .urgence .wrap{position:relative;display:flex;align-items:center;justify-content:space-between;gap:34px;flex-wrap:wrap;}
+  .urgence h2{color:#fff;font-size:clamp(28px,3.6vw,46px);line-height:1.1;margin-bottom:12px;max-width:560px;text-wrap:balance;}
+  .urgence p{margin:0;color:#d5eef2;font-size:16.5px;}
+  .tel-big{position:relative;display:inline-flex;align-items:center;gap:16px;background:#fff;color:var(--deep);border-radius:20px;padding:18px 30px;font-family:Georgia,serif;font-size:clamp(26px,3.2vw,38px);white-space:nowrap;box-shadow:0 24px 44px -20px rgba(3,20,26,.7);transition:transform .25s;}
+  .tel-big:hover{transform:translateY(-4px) scale(1.02);}
+  .tel-big .ring{position:relative;width:44px;height:44px;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .tel-big .ring::after{content:'';position:absolute;inset:0;border-radius:50%;border:2px solid var(--teal);animation:ring 2s ease-out infinite;}
+  @keyframes ring{0%{transform:scale(1);opacity:.7;}100%{transform:scale(1.9);opacity:0;}}
+  .tel-big svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
 
   /* ---------- Réalisations ---------- */
   .proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-  .proj{background:var(--bg);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;}
+  .proj{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s;}
+  .proj:hover{transform:translateY(-6px);box-shadow:0 34px 50px -34px rgba(6,26,33,.55);}
   .proj-media{padding:14px 14px 0;}
-  .proj-body{padding:18px 22px 24px;}
-  .proj-tag{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);background:var(--accent-light);padding:3px 10px;border-radius:20px;display:inline-block;margin-bottom:10px;font-weight:600;}
-  .proj h4{font-size:18px;margin-bottom:6px;}
-  .proj p{margin:0;font-size:13.5px;color:var(--muted);}
-  /* Avant / après */
-  .ba{position:relative;height:230px;border-radius:8px;overflow:hidden;user-select:none;--pos:50%;}
+  .proj-body{padding:20px 24px 28px;}
+  .proj-tag{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--teal);background:var(--teal-l);padding:4px 11px;border-radius:30px;display:inline-block;margin-bottom:12px;font-weight:600;}
+  .proj h4{font-size:21px;margin-bottom:6px;}
+  .proj p{margin:0;font-size:14px;color:var(--muted);}
+  .ba{position:relative;height:240px;border-radius:12px;overflow:hidden;user-select:none;--pos:50%;}
   .ba .photo{position:absolute;inset:0;border-radius:0;height:100%;}
   .ba .after{clip-path:inset(0 0 0 var(--pos));}
   .ba .photo.after{background:repeating-linear-gradient(135deg,#cfe3e7 0 12px,#dcebee 12px 24px);color:#3f7381;}
-  .ba-tag{position:absolute;top:10px;z-index:3;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;background:rgba(10,43,53,.85);color:#fff;padding:3px 10px;border-radius:20px;}
+  .ba-tag{position:absolute;top:10px;z-index:3;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;background:rgba(6,26,33,.85);color:#fff;padding:4px 11px;border-radius:30px;}
   .ba-tag.l{left:10px;} .ba-tag.r{right:10px;}
   .ba-line{position:absolute;top:0;bottom:0;left:var(--pos);width:2px;background:#fff;z-index:3;transform:translateX(-1px);pointer-events:none;}
-  .ba-line::after{content:'\2194';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:34px;height:34px;border-radius:50%;background:#fff;color:var(--deep);display:flex;align-items:center;justify-content:center;font-size:15px;box-shadow:0 2px 8px rgba(0,0,0,.25);}
+  .ba-line::after{content:'\2194';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:38px;height:38px;border-radius:50%;background:#fff;color:var(--deep);display:flex;align-items:center;justify-content:center;font-size:16px;box-shadow:0 4px 14px rgba(0,0,0,.3);}
   .ba input[type=range]{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:4;margin:0;touch-action:pan-y;}
-  /* Étapes */
   .steps3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
-  .steps3 .photo{height:100px;border-radius:6px;}
+  .steps3 .photo{height:176px;border-radius:8px;}
   .steps3 .photo::after{font-size:10px;}
-  .steps-cap{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:6px;font-size:11px;color:var(--muted);text-align:center;text-transform:uppercase;letter-spacing:.06em;}
-  .gal{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:8px;height:230px;}
-  .gal .photo{border-radius:6px;}
+  .steps-cap{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px;font-size:11px;color:var(--muted);text-align:center;text-transform:uppercase;letter-spacing:.07em;}
+  .gal{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:8px;height:240px;}
+  .gal .photo{border-radius:8px;}
   .gal .photo:first-child{grid-row:span 2;}
 
-  /* ---------- Expertise (sombre) ---------- */
+  /* ---------- Expertise ---------- */
   .pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
-  .pillar{border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:28px 22px;background:rgba(255,255,255,.04);transition:background .2s,border-color .2s;}
-  .pillar:hover{background:rgba(255,255,255,.09);border-color:rgba(143,201,212,.5);}
-  .pillar .num{font-family:Georgia,serif;font-size:14px;color:var(--gold-soft);margin-bottom:14px;}
-  .pillar h4{font-size:16.5px;margin-bottom:10px;line-height:1.35;}
-  .pillar p{margin:0;font-size:13.5px;color:#b3cbd0;}
+  .pillar{position:relative;border:1px solid rgba(255,255,255,.12);border-radius:var(--r);padding:32px 26px 34px;background:rgba(255,255,255,.035);overflow:hidden;transition:border-color .3s,transform .3s,background .3s;}
+  .pillar:hover{border-color:rgba(143,201,212,.55);transform:translateY(-5px);background:rgba(255,255,255,.07);}
+  .pillar .num{font-family:Georgia,serif;font-size:64px;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(217,168,95,.75);margin-bottom:22px;}
+  .pillar h4{font-size:20px;margin-bottom:10px;line-height:1.25;}
+  .pillar p{margin:0;font-size:14.5px;color:#a9c6cc;}
 
   /* ---------- Histoire ---------- */
-  .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start;}
-  .timeline{border-left:2px solid var(--accent-line);padding-left:28px;display:flex;flex-direction:column;gap:30px;margin-top:24px;}
+  .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:start;}
+  .timeline{position:relative;padding-left:34px;display:flex;flex-direction:column;gap:34px;margin-top:30px;--p:0;}
+  .timeline::before,.timeline::after{content:'';position:absolute;left:0;top:6px;width:2px;border-radius:2px;}
+  .timeline::before{bottom:6px;background:#d3e2e5;}
+  .timeline::after{height:calc((100% - 12px)*var(--p));background:linear-gradient(180deg,var(--teal),var(--ice));}
   .tl-item{position:relative;}
-  .tl-item::before{content:'';position:absolute;left:-34px;top:5px;width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--bg);}
-  .tl-year{font-family:Georgia,serif;font-size:18px;color:var(--accent);margin-bottom:3px;}
-  .tl-text{font-size:14.5px;color:var(--ink-soft);}
-  .about-copy p{color:var(--ink-soft);font-size:15.5px;margin:0 0 18px;}
-  .about-copy p:first-child{font-size:20px;color:var(--ink);font-family:Georgia,serif;line-height:1.45;}
-  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;}
-  .chip{border:1px solid var(--accent-line);background:var(--accent-light);color:var(--accent);border-radius:20px;padding:6px 14px;font-size:12.5px;font-weight:600;}
+  .tl-item::before{content:'';position:absolute;left:-40px;top:7px;width:12px;height:12px;border-radius:50%;background:#fff;border:2px solid #b4ced3;transition:background .4s,border-color .4s,box-shadow .4s;}
+  .tl-item.on::before{background:var(--teal);border-color:var(--teal);box-shadow:0 0 0 5px rgba(14,77,92,.15);}
+  .tl-year{font-family:Georgia,serif;font-size:24px;color:var(--teal);margin-bottom:2px;}
+  .tl-text{font-size:15px;color:var(--ink-soft);}
+  .about-copy p{color:var(--ink-soft);font-size:16.5px;margin:0 0 20px;}
+  .about-copy p:first-child{font-size:clamp(24px,2.8vw,34px);color:var(--ink);font-family:Georgia,serif;line-height:1.25;letter-spacing:-.01em;}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;}
+  .chipb{border:1px solid #bcd6db;background:var(--teal-l);color:var(--teal);border-radius:30px;padding:8px 16px;font-size:13px;font-weight:600;}
 
   /* ---------- Références ---------- */
-  .ref-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:34px;}
-  .ref-card{background:var(--surface);padding:26px;font-size:14px;color:var(--ink-soft);transition:background .2s;}
-  .ref-card:hover{background:var(--accent-light);}
-  .ref-card b{display:block;font-size:15px;color:var(--ink);margin-bottom:4px;}
-  .ref-tag{display:inline-block;margin-top:10px;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);background:var(--accent-light);padding:3px 9px;border-radius:20px;font-weight:600;}
-  .ref-card:hover .ref-tag{background:#fff;}
+  .ref-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:34px;}
+  .ref-card{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:28px;font-size:14.5px;color:var(--ink-soft);transition:transform .3s,border-color .3s,background .3s,box-shadow .3s;}
+  .ref-card:hover{transform:translateY(-4px);border-color:var(--ice);background:#fff;box-shadow:0 22px 36px -28px rgba(14,77,92,.55);}
+  .ref-card b{display:block;font-family:Georgia,serif;font-weight:400;font-size:20px;color:var(--ink);margin-bottom:4px;line-height:1.25;}
+  .ref-tag{display:inline-block;margin-top:14px;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--teal);background:var(--teal-l);padding:4px 11px;border-radius:30px;font-weight:600;}
   .sectors{display:flex;flex-wrap:wrap;gap:10px;}
-  .sector-chip{border:1px solid var(--line);border-radius:20px;padding:8px 16px;font-size:13px;color:var(--ink-soft);background:var(--surface);}
+  .sector-chip{border:1px solid var(--line);border-radius:30px;padding:9px 18px;font-size:13.5px;color:var(--ink-soft);background:var(--bg);}
 
   /* ---------- Avis ---------- */
-  .review-top{display:flex;align-items:center;gap:22px;margin-bottom:34px;flex-wrap:wrap;}
-  .score{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:16px 26px;}
-  .score b{font-family:Georgia,serif;font-size:38px;color:#fff;line-height:1;}
-  .stars{color:var(--gold-soft);font-size:15px;letter-spacing:2px;}
-  .score small{display:block;font-size:13px;color:#a9c3c9;}
+  .quote-mark{font-family:Georgia,serif;font-size:140px;line-height:.7;color:rgba(143,201,212,.2);margin-bottom:-10px;}
+  .score{display:inline-flex;align-items:center;gap:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:16px 28px;margin-bottom:34px;}
+  .score b{font-family:Georgia,serif;font-weight:400;font-size:46px;color:#fff;line-height:1;}
+  .stars{color:var(--gold);font-size:16px;letter-spacing:3px;}
+  .score small{display:block;font-size:13px;color:#8db4bc;}
   .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-  .review-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:26px;}
-  .review-card .stars{display:block;margin-bottom:12px;}
-  .review-card p{font-size:15px;color:#e5eff1;margin:0 0 16px;font-style:italic;}
-  .review-author{font-size:13px;color:#9fc3cb;display:flex;justify-content:space-between;gap:10px;}
+  .review-card{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.13);border-radius:var(--r);padding:30px;transition:transform .3s,border-color .3s;}
+  .review-card:hover{transform:translateY(-4px);border-color:rgba(143,201,212,.5);}
+  .review-card .stars{display:block;margin-bottom:14px;}
+  .review-card p{font-family:Georgia,serif;font-size:21px;line-height:1.35;color:#fff;margin:0 0 20px;}
+  .review-author{font-size:13px;color:#8db4bc;display:flex;justify-content:space-between;gap:10px;}
 
-  /* ---------- Équipe (optionnelle) ---------- */
+  /* ---------- Équipe ---------- */
   .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
-  .member .photo{aspect-ratio:4/5;margin-bottom:14px;}
-  .member b{display:block;font-family:Georgia,serif;font-size:17px;font-weight:400;}
-  .member span{font-size:13px;color:var(--muted);}
+  .member .photo{aspect-ratio:4/5;margin-bottom:16px;border-radius:var(--r);}
+  .member b{display:block;font-family:Georgia,serif;font-weight:400;font-size:19px;}
+  .member span{font-size:14px;color:var(--muted);}
 
   /* ---------- Contact ---------- */
-  .contact-grid{display:grid;grid-template-columns:1fr 1.05fr;border-radius:14px;overflow:hidden;box-shadow:0 20px 50px -20px rgba(10,43,53,.45);}
-  .contact-info{padding:50px;color:#fff;background:linear-gradient(160deg,var(--deep) 0%,var(--deep-2) 100%);}
-  .contact-info h2{color:#fff;font-size:29px;margin:10px 0 14px;}
-  .contact-info > p{color:#c5d9dd;font-size:14.5px;margin:0 0 28px;max-width:380px;}
-  .contact-line{padding:14px 0;border-top:1px solid rgba(255,255,255,.14);font-size:14.5px;}
-  .contact-line b{display:block;font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;color:#8db4bc;margin-bottom:3px;font-weight:600;}
+  .contact-grid{display:grid;grid-template-columns:1fr 1.05fr;border-radius:26px;overflow:hidden;box-shadow:0 40px 70px -40px rgba(6,26,33,.7);}
+  .contact-info{position:relative;padding:56px;color:#fff;background:radial-gradient(70% 60% at 100% 0%,rgba(143,201,212,.2) 0%,rgba(143,201,212,0) 70%),linear-gradient(165deg,var(--deep) 0%,#0c4150 100%);}
+  .contact-info h2{color:#fff;font-size:clamp(30px,3.6vw,44px);margin:16px 0 16px;line-height:1.08;}
+  .contact-info>p{color:#b9d6dc;font-size:15.5px;margin:0 0 30px;max-width:380px;}
+  .contact-line{padding:16px 0;border-top:1px solid rgba(255,255,255,.13);font-size:15.5px;}
+  .contact-line b{display:block;font-size:11.5px;text-transform:uppercase;letter-spacing:.1em;color:#7fa8b0;margin-bottom:3px;font-weight:600;}
   .contact-line a:hover{color:var(--ice);}
-  .contact-form{background:#fff;padding:50px;}
-  .contact-form label{display:block;font-size:12px;color:var(--muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:.06em;font-weight:600;}
-  .field{margin-bottom:16px;}
-  .contact-form input,.contact-form select,.contact-form textarea{width:100%;border:1px solid var(--line);border-radius:var(--radius);padding:12px 13px;font-size:14.5px;font-family:inherit;color:var(--ink);background:var(--bg);transition:border-color .15s,box-shadow .15s;}
-  .contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-light);}
-  .contact-form textarea{resize:vertical;min-height:100px;}
-  .contact-form .btn{width:100%;background:var(--accent);color:#fff;}
-  .contact-form .btn:hover{background:var(--steel);}
-  .form-note{font-size:12px;color:var(--muted);margin:12px 0 0;text-align:center;}
+  .contact-form{background:#fff;padding:56px;}
+  .contact-form label{display:block;font-size:12px;color:var(--muted);margin-bottom:7px;text-transform:uppercase;letter-spacing:.08em;font-weight:600;}
+  .field{margin-bottom:18px;}
+  .contact-form input,.contact-form select,.contact-form textarea{width:100%;border:1px solid var(--line);border-radius:12px;padding:14px 15px;font-size:15px;font-family:inherit;color:var(--ink);background:var(--bg);transition:border-color .2s,box-shadow .2s,background .2s;}
+  .contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{outline:none;border-color:var(--teal);background:#fff;box-shadow:0 0 0 4px rgba(14,77,92,.12);}
+  .contact-form textarea{resize:vertical;min-height:110px;}
+  .contact-form .btn{width:100%;background:var(--teal);color:#fff;padding:17px;}
+  .contact-form .btn:hover{background:var(--steel);transform:translateY(-2px);}
+  .form-note{font-size:12.5px;color:var(--muted);margin:14px 0 0;text-align:center;}
+  .form-note a{text-decoration:underline;}
 
-  /* ---------- Footer ---------- */
-  footer{background:var(--deep);color:#a9c3c9;padding:44px 0 26px;font-size:13px;}
-  .foot-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;}
-  .foot-row b{color:#fff;font-family:Georgia,serif;font-weight:400;font-size:18px;display:block;margin-bottom:6px;}
-  .foot-legal{display:flex;gap:22px;flex-wrap:wrap;margin-top:22px;font-size:13px;}
-  .foot-legal a{color:#d6e4e7;border-bottom:1px solid transparent;}
-  .foot-legal a:hover{color:var(--ice);border-color:var(--ice);}
-  .foot-credit{margin-top:26px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);text-align:center;font-size:12.5px;}
-  .foot-credit a{color:#d6e4e7;border-bottom:1px solid transparent;}
-  .foot-credit a:hover{color:var(--ice);border-color:var(--ice);}
+  /* ---------- Pied de page ---------- */
+  footer{position:relative;background:var(--deep);color:#8db4bc;padding:70px 0 26px;font-size:14px;overflow:hidden;}
+  .foot-row{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+  .foot-row b{display:block;color:#fff;font-family:Georgia,serif;font-weight:400;font-size:22px;margin-bottom:8px;}
+  .foot-legal{display:flex;gap:24px;flex-wrap:wrap;margin-top:6px;}
+  .foot-legal a,.foot-credit a{color:#cfe6eb;border-bottom:1px solid transparent;transition:border-color .2s,color .2s;}
+  .foot-legal a:hover,.foot-credit a:hover{color:var(--ice);border-color:var(--ice);}
+  .foot-credit{margin-top:22px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);text-align:center;font-size:13px;}
 
-  /* ---------- Étiquette maquette (bas droite) ---------- */
-  .maquette-tag{position:fixed;right:16px;bottom:16px;z-index:100;background:rgba(10,43,53,.72);color:#fff;font-size:12px;letter-spacing:.02em;padding:9px 15px;border-radius:20px;pointer-events:none;border:1px solid rgba(255,255,255,.18);}
-  @media(max-width:600px){.maquette-tag{right:10px;bottom:10px;font-size:11px;padding:7px 12px;}}
+  /* Barre d'appel mobile + étiquette maquette */
+  .callbar{display:none;}
+  .maquette-tag{position:fixed;right:16px;bottom:16px;z-index:110;background:rgba(6,26,33,.74);color:#fff;font-size:12px;letter-spacing:.02em;padding:9px 15px;border-radius:30px;border:1px solid rgba(255,255,255,.18);pointer-events:none;}
 
-  /* ---------- Animations d'apparition ---------- */
-  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;}
-  .reveal.in{opacity:1;transform:none;}
-  @media (prefers-reduced-motion:reduce){
-    .reveal{opacity:1;transform:none;transition:none;}
-    .hero-air path,.pulse::after{animation:none;}
-    html{scroll-behavior:auto;}
-  }
-
-  /* ---------- Tablette ---------- */
-  @media(max-width:960px){
-    .wrap{padding:0 24px;}
-    .nav{padding:12px 24px;}
-    nav.links{position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column;gap:0;padding:8px 24px 16px;display:none;box-shadow:0 18px 30px -20px rgba(0,0,0,.25);}
-    nav.links.open{display:flex;}
-    nav.links a{padding:13px 0;border-bottom:1px solid var(--line);font-size:15px;}
+  /* ---------- Tablette / petits ordinateurs ---------- */
+  @media(max-width:1040px){
+    nav.links,.nav-cta{display:none;}
     .burger{display:flex;}
-    .nav-cta{display:none;}
-    .hero-air.d{display:none;}
-    .hero-air.m{display:block;}
-    .hero-inner{grid-template-columns:1fr;padding:64px 24px 52px;gap:40px;}
-    .hero h1{font-size:36px;}
-    .hero-stats .wrap{grid-template-columns:repeat(2,1fr);}
-    section{padding:68px 0;}
-    .svc-main{grid-template-columns:1fr;}
-    .svc-sec{grid-template-columns:1fr 1fr;}
-    .proj-grid{grid-template-columns:1fr 1fr;}
+    nav.links.open{display:flex;position:absolute;left:0;right:0;top:calc(100% + 10px);flex-direction:column;gap:0;background:#fff;border-radius:18px;padding:10px 22px 18px;box-shadow:0 24px 40px -18px rgba(3,20,26,.55);}
+    nav.links.open a{padding:15px 0;border-bottom:1px solid var(--line);font-size:16px;}
+    nav.links.open a:last-child{border-bottom:none;}
+    nav.links.open a::after{display:none;}
+  }
+  @media(max-width:900px){
+    .wrap{padding:0 22px;}
+    section{padding:82px 0;}
+    .hero-main{grid-template-columns:1fr;padding:118px 22px 30px;}
+    .fan{position:absolute;width:min(94vw,520px);right:-28%;top:70px;opacity:.2 !important;animation:none;z-index:0;pointer-events:none;}
+    .fan .chip{display:none;}
+    .hero-main>div:first-child{position:relative;z-index:2;}
+    .hero-stats .wrap{grid-template-columns:repeat(2,1fr);gap:22px 20px;}
+    .scroll-hint{display:none;}
+    .bento{grid-template-columns:repeat(2,1fr);}
+    .svc-big{grid-column:span 2;}
+    .svc-small{grid-column:span 1;}
+    .svc-small:last-child{grid-column:span 2;}
+    .method-grid{grid-template-columns:1fr;gap:44px;}
+    .method .head{position:static;}
+    .proj-grid,.review-grid{grid-template-columns:1fr;}
     .pillars{grid-template-columns:1fr 1fr;}
-    .about-grid{grid-template-columns:1fr;gap:40px;}
+    .about-grid{grid-template-columns:1fr;gap:48px;}
     .ref-grid{grid-template-columns:1fr 1fr;}
-    .review-grid{grid-template-columns:1fr;}
     .team-grid{grid-template-columns:1fr 1fr;}
     .contact-grid{grid-template-columns:1fr;}
-    .contact-info,.contact-form{padding:38px 30px;}
+    .contact-info,.contact-form{padding:42px 32px;}
   }
 
   /* ---------- Mobile ---------- */
   @media(max-width:600px){
     :root{font-size:15px;}
     .wrap{padding:0 18px;}
-    .nav{padding:11px 18px;}
-    .topbar .wrap{flex-direction:column;gap:2px;text-align:center;padding-top:8px;padding-bottom:8px;}
-    .topbar .hide-m{display:none;}
+    section{padding:64px 0;}
+    .head{margin-bottom:38px;}
     .logo-img{height:38px;}
-    .logo-text{font-size:17px;}
-    .logo-text small{font-size:9px;}
-    .hero-inner{padding:46px 18px 40px;gap:30px;}
-    .hero h1{font-size:28px;line-height:1.15;}
-    .hero p.lead{font-size:15.5px;}
+    .nav{top:10px;width:calc(100% - 20px);padding:7px 8px 7px 14px;}
+    .hero-main{padding:104px 18px 24px;}
+    .hero h1{font-size:clamp(34px,10.4vw,44px);}
     .hero-cta{flex-direction:column;}
     .btn{width:100%;}
-    .glass{padding:24px 20px;}
-    .stat b{font-size:24px;}
-    section{padding:52px 0;}
-    .section-head{margin-bottom:34px;}
-    .section-head h2{font-size:25px;}
-    .svc-sec,.proj-grid,.pillars,.ref-grid,.team-grid{grid-template-columns:1fr;}
-    .svc-body{padding:24px 22px 26px;}
-    .svc-big h3{font-size:21px;}
-    .urgence{padding:42px 0;}
-    .urgence h2{font-size:23px;}
-    .urgence .tel{font-size:28px;}
-    .contact-info,.contact-form{padding:30px 20px;}
-    .contact-info h2{font-size:24px;}
+    .live{font-size:12px;}
+    .hero-eyebrow{font-size:clamp(9.5px,2.7vw,11px);letter-spacing:.09em;white-space:nowrap;margin-bottom:16px;}
+    .hero-eyebrow::before{display:none;}
+    .steps3 .photo{height:128px;}
+    .bento{grid-template-columns:1fr;}
+    .svc-big,.svc-small,.svc-small:last-child{grid-column:span 1;}
+    .svc-body{padding:26px 24px 30px;}
+    .svc-big .photo{height:190px;}
+    .svc-big h3{font-size:26px;}
+    .steps{padding-left:62px;gap:38px;}
+    .step .n{left:-62px;width:44px;height:44px;}
+    .steps::before,.steps::after{left:21px;}
+    .step h4{font-size:22px;}
+    .urgence{padding:64px 0;}
+    .tel-big{width:100%;justify-content:center;padding:16px 20px;}
+    .pillars,.ref-grid,.team-grid{grid-template-columns:1fr;}
+    .pillar .num{font-size:52px;margin-bottom:14px;}
+    .contact-info,.contact-form{padding:32px 22px;}
+    .contact-form input,.contact-form select,.contact-form textarea{font-size:16px;}
+    .contact-grid{border-radius:20px;}
+    .review-card p{font-size:19px;}
     .score{width:100%;justify-content:center;}
     .foot-row{flex-direction:column;}
-    .foot-legal{justify-content:center;}
-    .contact-form input,.contact-form select,.contact-form textarea{font-size:16px;}
-    .foot-legal a{padding:8px 0;}
+    body{padding-bottom:74px;}
+    .callbar{display:flex;position:fixed;left:10px;right:10px;bottom:10px;z-index:105;gap:8px;padding:8px;background:rgba(6,26,33,.96);border-radius:18px;box-shadow:0 16px 34px -10px rgba(0,0,0,.6);}
+    .callbar a{flex:1;display:flex;align-items:center;justify-content:center;padding:13px;border-radius:12px;font-weight:600;font-size:14.5px;}
+    .callbar .call{background:#fff;color:var(--deep);}
+    .callbar .quote{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2);}
+    .maquette-tag{right:10px;bottom:86px;font-size:11px;padding:7px 12px;}
+  }
+
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;}
+    .w>span{transform:none;} .hero .lead,.hero-cta,.hero .live,.fan{opacity:1;}
+    .js .reveal{opacity:1;transform:none;}
+    .track{animation:none;}
   }
 </style>
 </head>
 <body>
 
-<!-- ======= Bandeau supérieur ======= -->
-<div class="topbar">
-  <div class="wrap">
-    <span><span class="pulse"></span><b>Dépannage 7j/7, 24h/24</b><span class="hide-m"> — pour toute panne de ventilation ou de climatisation</span></span>
-    <a href="tel:+41327242277">032 724 22 77</a>
-  </div>
-</div>
+<div class="progress" aria-hidden="true"><i id="bar"></i></div>
 
-<!-- ======= En-tête ======= -->
-<header>
-  <div class="nav">
-    <a class="logo" href="#top" aria-label="Perfectair SA — accueil">
-      <img class="logo-img" src="perfect-air.png" width="470" height="98" alt="Perfectair SA — Étude et réalisation, ventilation, climatisation" onerror="this.remove();document.getElementById('logoFallback').style.display='flex'">
-      <span id="logoFallback" style="display:none;align-items:center;gap:10px;">
-        <span class="logo-mark">P</span>
-        <span class="logo-text">Perfectair<small>Ventilation &amp; climatisation</small></span>
-      </span>
-    </a>
-    <nav class="links" id="menu">
-      <a href="#services">Services</a>
-      <a href="#realisations">Réalisations</a>
-      <a href="#expertise">Expertise</a>
-      <a href="#histoire">Histoire</a>
-      <a href="#avis">Avis</a>
-      <a href="#equipe">Équipe</a>
-    </nav>
-    <a class="nav-cta" href="#contact">Demander un devis</a>
-    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
-  </div>
+<!-- ======= Navigation flottante ======= -->
+<header class="nav" id="nav">
+  <a class="logo" href="#top" aria-label="Perfectair SA — accueil"><img class="logo-img" src="perfect-air.png" width="470" height="98" alt="Perfectair SA — Étude et réalisation, ventilation, climatisation"></a>
+  <nav class="links" id="menu">
+    <a href="#services">Services</a>
+    <a href="#methode">Méthode</a>
+    <a href="#realisations">Réalisations</a>
+    <a href="#expertise">Expertise</a>
+    <a href="#histoire">Histoire</a>
+    <a href="#avis">Avis</a>
+    <a href="#equipe">Équipe</a>
+  </nav>
+  <a class="nav-cta" href="#contact">Demander un devis</a>
+  <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
 </header>
 
 <main id="top">
 
-<!-- ======= Hero (fond bleu foncé) ======= -->
+<!-- ======= Hero ======= -->
 <section class="hero" style="padding:0;">
   <div class="hero-photo"></div>
-  <svg class="hero-air d" viewBox="0 0 1200 600" preserveAspectRatio="none" aria-hidden="true">
-    <path d="M-50 120 C 250 40, 450 220, 700 130 S 1100 60, 1300 160"/>
-    <path d="M-50 300 C 200 380, 520 200, 760 310 S 1080 420, 1300 300"/>
-    <path d="M-50 480 C 280 420, 480 560, 780 470 S 1120 400, 1300 500"/>
-  </svg>
-  <svg class="hero-air m" viewBox="0 0 400 1000" preserveAspectRatio="none" aria-hidden="true">
-    <path d="M-20 60 C 90 20, 170 100, 250 60 S 370 20, 430 70"/>
-    <path d="M-20 185 C 90 225, 170 145, 250 185 S 370 225, 430 175"/>
-    <path d="M-20 310 C 90 270, 170 350, 250 310 S 370 270, 430 320"/>
-    <path d="M-20 435 C 90 475, 170 395, 250 435 S 370 475, 430 425"/>
-    <path d="M-20 560 C 90 520, 170 600, 250 560 S 370 520, 430 570"/>
-    <path d="M-20 685 C 90 725, 170 645, 250 685 S 370 725, 430 675"/>
-    <path d="M-20 810 C 90 770, 170 850, 250 810 S 370 770, 430 820"/>
-    <path d="M-20 935 C 90 975, 170 895, 250 935 S 370 975, 430 925"/>
-  </svg>
-  <div class="hero-inner">
-    <div class="reveal">
-      <span class="eyebrow">Ventilation · Climatisation · Bevaix (NE)</span>
-      <h1 style="margin-top:14px;">La maîtrise de l'air, <em>pensée en ingénierie.</em></h1>
+  <canvas id="flow" aria-hidden="true"></canvas>
+
+  <div class="hero-main">
+    <div>
+      <div class="live"><span class="dot"></span>Dépannage 7j/7, 24h/24</div>
+      <span class="eyebrow hero-eyebrow">Ventilation · Climatisation · Bevaix (NE)</span>
+      <h1>
+        <span class="w" style="--i:0"><span>La</span></span>
+        <span class="w" style="--i:1"><span>maîtrise</span></span>
+        <span class="w" style="--i:2"><span>de</span></span>
+        <span class="w" style="--i:3"><span>l'air,</span></span>
+        <em><span class="w" style="--i:4"><span>pensée</span></span>
+        <span class="w" style="--i:5"><span>en</span></span>
+        <span class="w" style="--i:6"><span>ingénierie.</span></span></em>
+      </h1>
       <!-- À MODIFIER : texte d'accroche à valider avec Perfectair -->
-      <p class="lead">Entretien, dépannage et climatisation : depuis 1944, Perfectair conçoit, installe et maintient des systèmes de ventilation et de climatisation, des environnements les plus exigeants aux besoins du quotidien.</p>
+      <p class="lead">Ventilation, entretien et dépannage : depuis 1944, Perfectair conçoit, installe et maintient des systèmes de ventilation et de climatisation, des environnements les plus exigeants aux besoins du quotidien.</p>
       <div class="hero-cta">
-        <a class="btn btn-light" href="#contact">Demander un devis</a>
+        <a class="btn btn-light" href="#contact">Demander un devis <span class="arrow">→</span></a>
         <a class="btn btn-ghost" href="tel:+41327242277">Appeler le 032 724 22 77</a>
       </div>
     </div>
-    <div class="glass reveal">
-      <h3>Notre méthode d'intervention</h3>
-      <div class="schema-row"><div class="schema-num">1</div><div><b>Analyse</b> — relevé, calcul de charges, contraintes du bâti.</div></div>
-      <div class="schema-row"><div class="schema-num">2</div><div><b>Dimensionnement</b> — réseau aéraulique, choix des équipements.</div></div>
-      <div class="schema-row"><div class="schema-num">3</div><div><b>Réalisation</b> — installation, mise en service, réglages.</div></div>
-      <div class="schema-row"><div class="schema-num">4</div><div><b>Suivi</b> — maintenance, entretien, dépannage 7j/7.</div></div>
+
+    <!-- Ventilateur animé -->
+    <div class="fan" aria-hidden="true">
+      <svg class="fan-rings" viewBox="0 0 400 400" fill="none">
+        <circle cx="200" cy="200" r="196" stroke="rgba(143,201,212,.22)" stroke-width="1" stroke-dasharray="2 10"/>
+        <circle cx="200" cy="200" r="168" stroke="rgba(143,201,212,.16)" stroke-width="1"/>
+        <circle cx="200" cy="200" r="140" stroke="rgba(217,168,95,.28)" stroke-width="1" stroke-dasharray="40 14"/>
+      </svg>
+      <svg class="fan-blades" viewBox="0 0 400 400">
+        <defs>
+          <linearGradient id="bl" x1="0" y1="1" x2="1" y2="0">
+            <stop offset="0" stop-color="#8fc9d4" stop-opacity=".05"/>
+            <stop offset="1" stop-color="#c9eef5" stop-opacity=".62"/>
+          </linearGradient>
+          <path id="blade" d="M200 200 C 214 154, 258 108, 322 100 C 318 148, 268 196, 200 200Z" fill="url(#bl)" stroke="rgba(201,238,245,.55)" stroke-width="1"/>
+        </defs>
+        <use href="#blade"/>
+        <use href="#blade" transform="rotate(51.43 200 200)"/>
+        <use href="#blade" transform="rotate(102.86 200 200)"/>
+        <use href="#blade" transform="rotate(154.29 200 200)"/>
+        <use href="#blade" transform="rotate(205.71 200 200)"/>
+        <use href="#blade" transform="rotate(257.14 200 200)"/>
+        <use href="#blade" transform="rotate(308.57 200 200)"/>
+      </svg>
+      <svg viewBox="0 0 400 400">
+        <circle cx="200" cy="200" r="30" fill="#0a2b35" stroke="rgba(143,201,212,.7)" stroke-width="2"/>
+        <circle cx="200" cy="200" r="10" fill="#8fc9d4"/>
+      </svg>
+      <span class="chip c1">Étude</span>
+      <span class="chip c2">Ventilation</span>
+      <span class="chip c3">Maintenance</span>
+      <span class="chip c4">Dépannage 24/7</span>
     </div>
   </div>
+
+  <div class="scroll-hint" aria-hidden="true"></div>
+
   <div class="hero-stats">
     <div class="wrap">
-      <div class="stat"><b data-count="1944">1944</b><span>Année de fondation</span></div>
-      <div class="stat"><b>80+</b><span>Ans d'expertise</span></div>
+      <div class="stat"><b data-count="1944" data-from="1880">1944</b><span>Année de fondation</span></div>
+      <div class="stat"><b data-count="80" data-suffix="+">80+</b><span>Ans d'expertise</span></div>
       <div class="stat"><b>5,0/5</b><span>Avis sur Google</span></div>
       <div class="stat"><b>24/7</b><span>Dépannage</span></div>
     </div>
   </div>
 </section>
 
-<!-- ======= Services (priorités : entretien/dépannage + climatisation) ======= -->
+<!-- ======= Bandeau défilant : références ======= -->
+<div class="marquee" aria-label="Quelques références">
+  <div class="track" id="track">
+    <span>Nivarox-Far SA — groupe Swatch</span>
+    <span>Banque cantonale neuchâteloise</span>
+    <span>Université de Neuchâtel</span>
+    <span>Universo SA</span>
+    <span>Parking Place Pury SA</span>
+    <span>Homes pour personnes âgées</span>
+  </div>
+</div>
+
+<!-- ======= Services ======= -->
 <section id="services">
   <div class="wrap">
-    <div class="section-head reveal">
+    <div class="head reveal">
       <span class="eyebrow">Nos services</span>
-      <h2>Entretien, dépannage et climatisation : nos priorités.</h2>
+      <h2>Ventilation, entretien et dépannage : nos priorités.</h2>
       <p>De la panne urgente à l'installation complète, une seule entreprise pour étudier, réaliser et suivre vos installations.</p>
     </div>
 
-    <div class="svc-main">
-      <article class="svc-big reveal">
+    <div class="bento">
+      <article class="svc-big spot reveal">
         <div class="photo" data-label="Photo à venir — entretien / dépannage"><img loading="lazy" decoding="async" src="images/service-depannage.jpg" alt="Entretien et dépannage" onerror="this.remove()"></div>
         <div class="svc-body">
           <span class="badge">Service prioritaire</span>
@@ -500,59 +568,73 @@
         </div>
       </article>
 
-      <article class="svc-big reveal">
-        <div class="photo" data-label="Photo à venir — climatisation"><img loading="lazy" decoding="async" src="images/service-clim.jpg" alt="Climatisation" onerror="this.remove()"></div>
+      <article class="svc-big spot reveal">
+        <div class="photo" data-label="Photo à venir — ventilation"><img loading="lazy" decoding="async" src="images/service-ventilation.jpg" alt="Ventilation" onerror="this.remove()"></div>
         <div class="svc-body">
           <span class="badge">Service prioritaire</span>
-          <h3>Climatisation</h3>
+          <h3>Ventilation</h3>
           <!-- À MODIFIER : détails à confirmer avec Perfectair -->
-          <p>Étude et réalisation d'installations de climatisation adaptées à votre bâtiment, pour un confort optimal et une consommation maîtrisée.</p>
+          <p>Étude et réalisation d'installations de ventilation pour des bâtiments existants ou en construction, du réseau aéraulique à la mise en service.</p>
           <ul class="ticks">
-            <li>Étude et dimensionnement sur mesure</li>
+            <li>Étude et dimensionnement du réseau aéraulique</li>
             <li>Installation et mise en service</li>
-            <li>Solutions de confort et d'économie d'énergie</li>
+            <li>Environnements exigeants : hôpitaux, salles blanches, hôtels</li>
           </ul>
           <a class="svc-link" href="#contact">Demander une étude →</a>
         </div>
       </article>
-    </div>
 
-    <!-- Autres services (à confirmer / compléter avec Perfectair) -->
-    <div class="svc-sec">
-      <div class="svc-card reveal">
-        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M3 8h11a3 3 0 1 0-3-3"/><path d="M3 12h16a3 3 0 1 1-3 3"/><path d="M3 16h8a3 3 0 1 1-3 3"/></svg></div>
-        <h4>Ventilation</h4>
-        <p>Étude et réalisation d'installations de ventilation pour bâtiments existants ou en construction.</p>
-      </div>
-      <div class="svc-card reveal">
+      <div class="svc-small reveal">
         <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M4 20V10l8-6 8 6v10"/><path d="M9 20v-6h6v6"/></svg></div>
         <h4>Environnements exigeants</h4>
         <p>Hôpitaux, salles blanches, hôtels : des solutions adaptées aux contraintes les plus strictes.</p>
       </div>
-      <div class="svc-card reveal">
+      <div class="svc-small reveal">
         <div class="svc-ico"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
         <h4>Calcul &amp; dimensionnement</h4>
         <p>Calcul de dimensionnement de réseaux aérauliques, conseils, analyses et devis détaillés.</p>
+      </div>
+      <div class="svc-small reveal">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M12 3v18M4.2 7.5l15.6 9M19.8 7.5l-15.6 9"/></svg></div>
+        <h4>Climatisation</h4>
+        <p>Installation de systèmes de climatisation, en complément de nos installations de ventilation.</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ======= Méthode ======= -->
+<section id="methode" class="dark method">
+  <div class="wrap method-grid">
+    <div class="head reveal">
+      <span class="eyebrow">Notre méthode</span>
+      <h2>Chaque projet commence par un calcul, pas par un catalogue.</h2>
+      <p>Nous dimensionnons le réseau aéraulique en fonction du bâtiment, avant de choisir les équipements. Quatre étapes, du relevé au suivi.</p>
+    </div>
+    <div class="steps" data-progress>
+      <div class="step"><div class="n">1</div><h4>Analyse</h4><p>Relevé sur place, calcul de charges et prise en compte des contraintes du bâti.</p></div>
+      <div class="step"><div class="n">2</div><h4>Dimensionnement</h4><p>Conception du réseau aéraulique et choix des équipements adaptés.</p></div>
+      <div class="step"><div class="n">3</div><h4>Réalisation</h4><p>Installation, mise en service et réglages par nos équipes.</p></div>
+      <div class="step"><div class="n">4</div><h4>Suivi</h4><p>Maintenance, entretien et dépannage 7 jours sur 7, 24 heures sur 24.</p></div>
+    </div>
+  </div>
+</section>
+
 <!-- ======= Bandeau urgence ======= -->
-<div class="urgence">
+<section class="urgence">
   <div class="wrap">
     <div>
       <h2>Une panne ? Nous intervenons 7j/7, 24h/24.</h2>
       <p>Appelez directement notre service de dépannage.</p>
     </div>
-    <a class="tel" href="tel:+41327242277">032 724 22 77</a>
+    <a class="tel-big" href="tel:+41327242277"><span class="ring"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span>032 724 22 77</a>
   </div>
-</div>
+</section>
 
 <!-- ======= Réalisations ======= -->
 <section id="realisations" class="alt">
   <div class="wrap">
-    <div class="section-head reveal">
+    <div class="head reveal">
       <span class="eyebrow">Réalisations</span>
       <h2>Des projets concrets, de l'état initial au résultat.</h2>
       <!-- À MODIFIER : projets à choisir par Perfectair -->
@@ -560,11 +642,9 @@
     </div>
 
     <div class="proj-grid">
-
-      <!-- Projet 1 : avant / après -->
       <article class="proj reveal">
         <div class="proj-media">
-          <div class="ba" id="ba1">
+          <div class="ba">
             <div class="photo before" data-label="Avant"><img loading="lazy" decoding="async" src="images/projet1-avant.jpg" alt="Projet 1 avant" onerror="this.remove()"></div>
             <div class="photo after" data-label="Après"><img loading="lazy" decoding="async" src="images/projet1-apres.jpg" alt="Projet 1 après" onerror="this.remove()"></div>
             <span class="ba-tag l">Avant</span><span class="ba-tag r">Après</span>
@@ -579,7 +659,6 @@
         </div>
       </article>
 
-      <!-- Projet 2 : étapes -->
       <article class="proj reveal">
         <div class="proj-media">
           <div class="steps3">
@@ -597,7 +676,6 @@
         </div>
       </article>
 
-      <!-- Projet 3 : galerie -->
       <article class="proj reveal">
         <div class="proj-media">
           <div class="gal">
@@ -613,24 +691,23 @@
           <p>Lieu · type d'installation. Courte description à ajouter.</p>
         </div>
       </article>
-
     </div>
   </div>
 </section>
 
-<!-- ======= Expertise (fond bleu foncé) ======= -->
+<!-- ======= Expertise ======= -->
 <section id="expertise" class="dark">
   <div class="wrap">
-    <div class="section-head reveal">
+    <div class="head reveal">
       <span class="eyebrow">Notre expertise</span>
       <h2>Une approche d'ingénieur, pas de revendeur.</h2>
       <p>La maîtrise de l'air ne se résume pas au choix d'une machine. Elle exige de comprendre le bâtiment, ses usages et les contraintes physiques du flux d'air.</p>
     </div>
     <div class="pillars">
-      <div class="pillar reveal"><div class="num">01</div><h4>Calcul de dimensionnement</h4><p>Réseaux aérauliques dimensionnés selon les débits, les pertes de charge et les contraintes du bâti.</p></div>
-      <div class="pillar reveal"><div class="num">02</div><h4>Environnements exigeants</h4><p>Hôpitaux, salles blanches, hôtels : des installations adaptées aux exigences les plus strictes.</p></div>
-      <div class="pillar reveal"><div class="num">03</div><h4>Confort et économie d'énergie</h4><p>Des solutions optimisées pour le confort thermique et la maîtrise de la consommation.</p></div>
-      <div class="pillar reveal"><div class="num">04</div><h4>Fournisseurs sélectionnés</h4><p>Des partenariats avec des fabricants mondiaux, européens et régionaux de qualité.</p></div>
+      <div class="pillar spot reveal"><div class="num">01</div><h4>Calcul de dimensionnement</h4><p>Réseaux aérauliques dimensionnés selon les débits, les pertes de charge et les contraintes du bâti.</p></div>
+      <div class="pillar spot reveal"><div class="num">02</div><h4>Environnements exigeants</h4><p>Hôpitaux, salles blanches, hôtels : des installations adaptées aux exigences les plus strictes.</p></div>
+      <div class="pillar spot reveal"><div class="num">03</div><h4>Confort et économie d'énergie</h4><p>Des solutions optimisées pour le confort thermique et la maîtrise de la consommation.</p></div>
+      <div class="pillar spot reveal"><div class="num">04</div><h4>Fournisseurs sélectionnés</h4><p>Des partenariats avec des fabricants mondiaux, européens et régionaux de qualité.</p></div>
     </div>
   </div>
 </section>
@@ -640,11 +717,12 @@
   <div class="wrap about-grid">
     <div class="reveal">
       <span class="eyebrow">Notre histoire</span>
-      <div class="timeline">
+      <div class="timeline" data-progress>
         <div class="tl-item"><div class="tl-year">1944</div><div class="tl-text">Fondation de Perfectair par M. Soguel, à Neuchâtel.</div></div>
         <div class="tl-item"><div class="tl-year">1986</div><div class="tl-text">Reprise par Johann Pivoda, qui impose l'entreprise sur le marché de la ventilation et de la climatisation.</div></div>
-        <div class="tl-item"><div class="tl-year">2007</div><div class="tl-text">Les frères Aebischer reprennent la société et en assurent la direction.</div></div>
-        <div class="tl-item"><div class="tl-year">Aujourd'hui</div><div class="tl-text">Perfectair poursuit son activité depuis Bevaix, sous la direction des frères Aebischer, avec la même exigence de qualité.</div></div>
+        <div class="tl-item"><div class="tl-year">2007</div><div class="tl-text">Raphaël Aebischer reprend la société et en assure la direction.</div></div>
+        <div class="tl-item"><div class="tl-year">2009</div><div class="tl-text">Son frère, Sébastien Aebischer, le rejoint à la tête de l'entreprise.</div></div>
+        <div class="tl-item"><div class="tl-year">Aujourd'hui</div><div class="tl-text">Perfectair poursuit son activité depuis Bevaix, sous la direction de Raphaël et Sébastien Aebischer, avec la même exigence de qualité.</div></div>
       </div>
     </div>
     <div class="about-copy reveal">
@@ -652,9 +730,9 @@
       <p>Perfectair SA est un bureau d'étude et d'installation basé à Bevaix, dans le canton de Neuchâtel, actif dans toute la Romandie ainsi que dans les régions francophones des cantons de Berne et Fribourg.</p>
       <p>Chaque projet part d'un calcul, pas d'un catalogue : nous dimensionnons le réseau aéraulique en fonction du bâtiment, avant de choisir les équipements.</p>
       <div class="chips">
-        <span class="chip">Membre SUISSETEC</span>
-        <span class="chip">Depuis 1944</span>
-        <span class="chip">Romandie, Berne et Fribourg francophones</span>
+        <span class="chipb">Respect des normes Minergie</span>
+        <span class="chipb">Depuis 1944</span>
+        <span class="chipb">Romandie, Berne et Fribourg francophones</span>
       </div>
     </div>
   </div>
@@ -663,19 +741,19 @@
 <!-- ======= Références ======= -->
 <section id="references" class="alt">
   <div class="wrap">
-    <div class="section-head reveal">
+    <div class="head reveal">
       <span class="eyebrow">Références</span>
       <h2>Ils nous font confiance.</h2>
       <!-- À MODIFIER : références à mettre en avant, à choisir par Perfectair -->
       <p>Quelques références en Suisse romande.</p>
     </div>
-    <div class="ref-grid reveal">
-      <div class="ref-card"><b>Nivarox-Far SA</b>Groupe Swatch, Le Locle<br><span class="ref-tag">Industrie</span></div>
-      <div class="ref-card"><b>Universo SA</b>La Chaux-de-Fonds<br><span class="ref-tag">Industrie</span></div>
-      <div class="ref-card"><b>Banque cantonale neuchâteloise</b>Neuchâtel<br><span class="ref-tag">Tertiaire</span></div>
-      <div class="ref-card"><b>Université de Neuchâtel</b>Faculté des sciences<br><span class="ref-tag">Institution</span></div>
-      <div class="ref-card"><b>Parking Place Pury SA</b>Neuchâtel<br><span class="ref-tag">Infrastructure</span></div>
-      <div class="ref-card"><b>Homes pour personnes âgées</b>Düdingen, Flamatt, Le Locle, La Chaux-de-Fonds<br><span class="ref-tag">Santé</span></div>
+    <div class="ref-grid">
+      <div class="ref-card reveal"><b>Nivarox-Far SA</b>Groupe Swatch, Le Locle<br><span class="ref-tag">Industrie</span></div>
+      <div class="ref-card reveal"><b>Universo SA</b>La Chaux-de-Fonds<br><span class="ref-tag">Industrie</span></div>
+      <div class="ref-card reveal"><b>Banque cantonale neuchâteloise</b>Neuchâtel<br><span class="ref-tag">Tertiaire</span></div>
+      <div class="ref-card reveal"><b>Université de Neuchâtel</b>Faculté des sciences<br><span class="ref-tag">Institution</span></div>
+      <div class="ref-card reveal"><b>Parking Place Pury SA</b>Neuchâtel<br><span class="ref-tag">Infrastructure</span></div>
+      <div class="ref-card reveal"><b>Homes pour personnes âgées</b>Düdingen, Flamatt, Le Locle, La Chaux-de-Fonds<br><span class="ref-tag">Santé</span></div>
     </div>
     <div class="sectors reveal">
       <span class="sector-chip">Industrie horlogère</span>
@@ -688,18 +766,16 @@
   </div>
 </section>
 
-<!-- ======= Avis Google (fond bleu foncé) ======= -->
+<!-- ======= Avis ======= -->
 <section id="avis" class="dark">
   <div class="wrap">
-    <div class="section-head reveal">
+    <div class="head reveal">
       <span class="eyebrow">Avis clients</span>
       <h2>Ce que disent nos clients sur Google.</h2>
     </div>
-    <div class="review-top reveal">
-      <div class="score">
-        <b>5,0</b>
-        <div><span class="stars">★★★★★</span><small>Avis sur Google</small></div>
-      </div>
+    <div class="score reveal">
+      <b>5,0</b>
+      <div><span class="stars">★★★★★</span><small>Avis sur Google</small></div>
     </div>
     <div class="review-grid">
       <div class="review-card reveal"><span class="stars">★★★★★</span><p>« Excellent conseil, très bonne disponibilité et très bonne qualité. »</p><div class="review-author"><span>Geoffrey Marchand</span><span>Local Guide</span></div></div>
@@ -709,24 +785,24 @@
   </div>
 </section>
 
-<!-- ======= Équipe (OPTIONNELLE — pour la masquer : ajouter le mot hidden sur la ligne ci-dessous et commenter son lien de menu) ======= -->
+<!-- ======= Équipe (OPTIONNELLE — pour la masquer : ajouter le mot hidden sur la ligne ci-dessous, et retirer son lien dans le menu) ======= -->
 <section id="equipe">
   <div class="wrap">
-    <div class="section-head">
+    <div class="head reveal">
       <span class="eyebrow">Notre équipe</span>
       <h2>Les personnes derrière vos installations.</h2>
     </div>
     <div class="team-grid">
-      <div class="member"><div class="photo" data-label="Photo à venir"><img loading="lazy" decoding="async" src="images/equipe1.jpg" alt="" onerror="this.remove()"></div><b>Prénom Nom</b><span>Fonction</span></div>
-      <div class="member"><div class="photo" data-label="Photo à venir"><img loading="lazy" decoding="async" src="images/equipe2.jpg" alt="" onerror="this.remove()"></div><b>Prénom Nom</b><span>Fonction</span></div>
-      <div class="member"><div class="photo" data-label="Photo à venir"><img loading="lazy" decoding="async" src="images/equipe3.jpg" alt="" onerror="this.remove()"></div><b>Prénom Nom</b><span>Fonction</span></div>
-      <div class="member"><div class="photo" data-label="Photo à venir"><img loading="lazy" decoding="async" src="images/equipe4.jpg" alt="" onerror="this.remove()"></div><b>Prénom Nom</b><span>Fonction</span></div>
+      <div class="member reveal"><div class="photo" data-label="Photo à venir"><img loading="lazy" decoding="async" src="images/equipe1.jpg" alt="" onerror="this.remove()"></div><b>Prénom Nom</b><span>Fonction</span></div>
+      <div class="member reveal"><div class="photo" data-label="Photo à venir"><img loading="lazy" decoding="async" src="images/equipe2.jpg" alt="" onerror="this.remove()"></div><b>Prénom Nom</b><span>Fonction</span></div>
+      <div class="member reveal"><div class="photo" data-label="Photo à venir"><img loading="lazy" decoding="async" src="images/equipe3.jpg" alt="" onerror="this.remove()"></div><b>Prénom Nom</b><span>Fonction</span></div>
+      <div class="member reveal"><div class="photo" data-label="Photo à venir"><img loading="lazy" decoding="async" src="images/equipe4.jpg" alt="" onerror="this.remove()"></div><b>Prénom Nom</b><span>Fonction</span></div>
     </div>
   </div>
 </section>
 
 <!-- ======= Contact ======= -->
-<section id="contact">
+<section id="contact" style="padding-top:60px;">
   <div class="wrap">
     <div class="contact-grid reveal">
       <div class="contact-info">
@@ -751,8 +827,8 @@
           </select>
         </div>
         <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" placeholder="Décrivez votre projet ou votre besoin" required></textarea></div>
-        <button class="btn" type="submit">Envoyer la demande</button>
-        <p class="form-note">Pour un dépannage urgent, appelez le 032 724 22 77.<br>Vos données servent uniquement à répondre à votre demande : voir la <a href="confidentialite.html" style="text-decoration:underline;">déclaration de confidentialité</a>.</p>
+        <button class="btn" type="submit">Envoyer la demande <span class="arrow">→</span></button>
+        <p class="form-note">Pour un dépannage urgent, appelez le 032 724 22 77.<br>Vos données servent uniquement à répondre à votre demande : voir la <a href="confidentialite.html">déclaration de confidentialité</a>.</p>
       </form>
     </div>
   </div>
@@ -765,11 +841,12 @@
   <div class="wrap">
     <div class="foot-row">
       <div><b>Perfectair SA</b>Chemin de Buchaux 34, 2022 Bevaix<br>032 724 22 77 · info@perfectair.ch</div>
-      <div>CHE-107.779.520<br>Membre SUISSETEC · Depuis 1944</div>
-    </div>
-    <div class="foot-legal">
-      <a href="mentions-legales.html">Mentions légales</a>
-      <a href="confidentialite.html">Confidentialité</a>
+      <div>CHE-107.779.520<br>Respect des normes Minergie · Depuis 1944
+        <div class="foot-legal">
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="confidentialite.html">Confidentialité</a>
+        </div>
+      </div>
     </div>
     <div class="foot-credit">
       <a href="https://www.stuber-digital-marketing.ch" target="_blank" rel="noopener">Site réalisé par Stuber Digital Marketing</a>
@@ -777,12 +854,21 @@
   </div>
 </footer>
 
+<!-- Barre d'appel (mobile) -->
+<div class="callbar">
+  <a class="call" href="tel:+41327242277">Appeler</a>
+  <a class="quote" href="#contact">Devis</a>
+</div>
+
 <!-- Étiquette maquette : supprimer cette ligne à la mise en ligne finale -->
-<div class="maquette-tag">Maquette non officielle — en cours de réalisation</div>
+<div class="maquette-tag">Version provisoire — en cours de réalisation</div>
 
 <script>
 (function(){
-  /* Menu mobile */
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var canHover=window.matchMedia('(hover: hover)').matches;
+
+  /* ---------- Menu ---------- */
   var burger=document.getElementById('burger'), menu=document.getElementById('menu');
   burger.addEventListener('click',function(){
     var open=menu.classList.toggle('open');
@@ -792,28 +878,92 @@
     if(e.target.tagName==='A'){menu.classList.remove('open');burger.setAttribute('aria-expanded','false');}
   });
 
-  /* Met l'animation des lignes d'air en pause quand le haut de page n'est plus visible */
-  var airs=document.querySelectorAll('.hero-air');
-  if(airs.length && 'IntersectionObserver' in window){
-    new IntersectionObserver(function(en){ airs.forEach(function(a){ a.classList.toggle('paused',!en[0].isIntersecting); }); }).observe(document.querySelector('.hero'));
+  /* ---------- Bandeau défilant : duplication ---------- */
+  var track=document.getElementById('track');
+  if(track){
+    var html=track.innerHTML;
+    track.insertAdjacentHTML('beforeend',html.replace(/<span>/g,'<span aria-hidden="true">'));
+    track.insertAdjacentHTML('beforeend',html.replace(/<span>/g,'<span aria-hidden="true">'));
+    track.insertAdjacentHTML('beforeend',html.replace(/<span>/g,'<span aria-hidden="true">'));
+    /* 4 copies au total : la translation de -50 % boucle sans à-coup */
   }
 
-  /* Apparition au défilement */
+  /* ---------- Apparition au défilement ---------- */
   var items=document.querySelectorAll('.reveal');
   if('IntersectionObserver' in window){
     var io=new IntersectionObserver(function(entries){
-      entries.forEach(function(en){ if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);} });
-    },{threshold:.12});
-    items.forEach(function(el,i){ el.style.transitionDelay=(i%3)*90+'ms'; io.observe(el); });
+      entries.forEach(function(en){ if(en.isIntersecting){var el=en.target;el.classList.add('in');io.unobserve(el);setTimeout(function(){el.classList.remove('reveal','in');el.style.transitionDelay='';},1300);} });
+    },{threshold:.12,rootMargin:'0px 0px -4% 0px'});
+    items.forEach(function(el,i){ el.style.transitionDelay=(i%4)*80+'ms'; io.observe(el); });
   } else { items.forEach(function(el){el.classList.add('in');}); }
 
-  /* Curseur avant / après */
+  /* ---------- Compteurs ---------- */
+  function fmt(n){return String(Math.round(n));}
+  var counters=document.querySelectorAll('[data-count]');
+  function runCounter(el){
+    var to=+el.getAttribute('data-count'), from=+(el.getAttribute('data-from')||0), suf=el.getAttribute('data-suffix')||'';
+    if(reduce){el.textContent=fmt(to)+suf;return;}
+    var t0=null, dur=1700;
+    function step(ts){
+      if(!t0)t0=ts;
+      var p=Math.min((ts-t0)/dur,1), e=1-Math.pow(1-p,4);
+      el.textContent=fmt(from+(to-from)*e)+suf;
+      if(p<1)requestAnimationFrame(step);
+    }
+    el.textContent=fmt(from)+suf;
+    requestAnimationFrame(step);
+  }
+  if('IntersectionObserver' in window){
+    var cio=new IntersectionObserver(function(en){
+      en.forEach(function(x){ if(x.isIntersecting){runCounter(x.target);cio.unobserve(x.target);} });
+    },{threshold:.6});
+    counters.forEach(function(c){cio.observe(c);});
+  }
+
+  /* ---------- Spot lumineux ---------- */
+  if(canHover){
+    document.querySelectorAll('.spot').forEach(function(el){
+      el.addEventListener('pointermove',function(e){
+        var r=el.getBoundingClientRect();
+        el.style.setProperty('--mx',(e.clientX-r.left)+'px');
+        el.style.setProperty('--my',(e.clientY-r.top)+'px');
+      },{passive:true});
+    });
+  }
+
+  /* ---------- Progression : barre + chronologies ---------- */
+  var bar=document.getElementById('bar');
+  var progs=document.querySelectorAll('[data-progress]');
+  var ticking=false;
+  function onScroll(){
+    if(ticking)return; ticking=true;
+    requestAnimationFrame(function(){
+      var h=document.documentElement.scrollHeight-window.innerHeight;
+      bar.style.transform='scaleX('+(h>0?Math.min(window.scrollY/h,1):0)+')';
+      var mid=window.innerHeight*0.62;
+      progs.forEach(function(box){
+        var r=box.getBoundingClientRect();
+        var p=Math.max(0,Math.min(1,(mid-r.top)/r.height));
+        box.style.setProperty('--p',p.toFixed(3));
+        Array.prototype.forEach.call(box.children,function(ch){
+          var cr=ch.getBoundingClientRect();
+          ch.classList.toggle('on',cr.top<mid);
+        });
+      });
+      ticking=false;
+    });
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  onScroll();
+
+  /* ---------- Curseur avant / après ---------- */
   document.querySelectorAll('.ba').forEach(function(ba){
     var r=ba.querySelector('input');
     r.addEventListener('input',function(){ ba.style.setProperty('--pos',r.value+'%'); });
   });
 
-  /* Formulaire : ouvre le client mail avec le message prérempli (en attendant un service d'envoi) */
+  /* ---------- Formulaire : ouvre la messagerie avec un message prérempli ---------- */
   document.getElementById('contactForm').addEventListener('submit',function(e){
     e.preventDefault();
     var f=e.target;
@@ -821,6 +971,74 @@
     var body='Nom : '+f.nom.value+'\nE-mail : '+f.email.value+'\nTéléphone : '+f.tel.value+'\nSujet : '+f.sujet.value+'\n\n'+f.message.value;
     window.location.href='mailto:info@perfectair.ch?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
   });
+
+  /* ---------- Flux d'air : particules sur la bannière ---------- */
+  var cv=document.getElementById('flow');
+  if(cv && cv.getContext){
+    var ctx=cv.getContext('2d'), hero=cv.parentElement;
+    var W=0,H=0,parts=[],mouse={x:-9999,y:-9999},t=0,raf=0,visible=true,frame=0;
+    var TAIL=14;
+    function spawn(randomX){
+      return {x:randomX?Math.random()*W:-30, y:Math.random()*H, s:.7+Math.random()*1.3, a:.22+Math.random()*.5, h:[]};
+    }
+    function init(){
+      var n=W<700?34:Math.max(40,Math.min(96,Math.round(W/15)));
+      parts=[]; for(var i=0;i<n;i++)parts.push(spawn(true));
+    }
+    function resize(){
+      var dpr=Math.min(window.devicePixelRatio||1,1.5);
+      var r=hero.getBoundingClientRect(); W=r.width; H=r.height;
+      cv.width=Math.round(W*dpr); cv.height=Math.round(H*dpr);
+      ctx.setTransform(dpr,0,0,dpr,0,0);
+      init();
+    }
+    function advance(){
+      t+=1;
+      for(var i=0;i<parts.length;i++){
+        var p=parts[i];
+        var ang=Math.sin(p.x*.0042+t*.006)*.9+Math.cos(p.y*.0058-t*.005)*.7;
+        var vx=Math.cos(ang)*p.s*1.15+.55, vy=Math.sin(ang)*p.s*1.15;
+        var dx=p.x-mouse.x, dy=p.y-mouse.y, d2=dx*dx+dy*dy;
+        if(d2<24000){var d=Math.sqrt(d2)||1,f=(1-d/155)*3.2;vx+=dx/d*f;vy+=dy/d*f;}
+        p.x+=vx; p.y+=vy;
+        p.h.push(p.x,p.y); if(p.h.length>TAIL*2)p.h.splice(0,2);
+        if(p.x>W+40||p.y<-40||p.y>H+40){parts[i]=spawn(false);}
+      }
+    }
+    function draw(){
+      ctx.clearRect(0,0,W,H);
+      ctx.lineCap='round';
+      for(var i=0;i<parts.length;i++){
+        var p=parts[i],h=p.h,n=h.length/2; if(n<3)continue;
+        var seg=Math.ceil(n/3);
+        for(var g=0;g<3;g++){
+          var a0=g*seg, a1=Math.min(n-1,(g+1)*seg);
+          ctx.beginPath(); ctx.moveTo(h[a0*2],h[a0*2+1]);
+          for(var k=a0+1;k<=a1;k++)ctx.lineTo(h[k*2],h[k*2+1]);
+          ctx.strokeStyle='rgba(143,201,212,'+(p.a*(.25+g*.38)).toFixed(3)+')';
+          ctx.lineWidth=.6+g*.55;
+          ctx.stroke();
+        }
+      }
+    }
+    function loop(){
+      raf=0; if(!visible||document.hidden)return;
+      frame++;
+      if(W>=700||frame%2===0){advance();draw();}
+      raf=requestAnimationFrame(loop);
+    }
+    function start(){ if(!raf&&!reduce){raf=requestAnimationFrame(loop);} }
+    resize();
+    if(reduce){ for(var s=0;s<140;s++)advance(); draw(); }
+    else start();
+    var rt; window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){resize(); if(reduce){for(var s=0;s<140;s++)advance();draw();}},180);});
+    hero.addEventListener('pointermove',function(e){var r=hero.getBoundingClientRect();mouse.x=e.clientX-r.left;mouse.y=e.clientY-r.top;},{passive:true});
+    hero.addEventListener('pointerleave',function(){mouse.x=mouse.y=-9999;});
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(function(en){visible=en[0].isIntersecting; if(visible)start();}).observe(hero);
+    }
+    document.addEventListener('visibilitychange',function(){ if(!document.hidden)start(); });
+  }
 })();
 </script>
 </body>
